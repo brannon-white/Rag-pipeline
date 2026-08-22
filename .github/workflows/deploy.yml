@@ -1,0 +1,115 @@
+name: Deploy
+
+# Every push to main: build, migrate, deploy, smoke-test, auto-rollback on
+# failure. No stored AWS keys anywhere in this workflow -- auth is OIDC
+# (see terraform/modules/iam's github_deploy role, trust-scoped to exactly
+# `repo:<this repo>:ref:refs/heads/main`).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write # required for OIDC -- nothing else needs elevated perms
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC, no stored keys)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Log in to ECR
+        run: |
+          aws ecr get-login-password --region "${{ vars.AWS_REGION }}" \
+            | docker login --username AWS --password-stdin "${{ vars.ECR_REPOSITORY_URL }}"
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build and push image (git-SHA tag, never latest)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64 # App Runner runs x86_64, not this runner's/Mac's arm64
+          push: true
+          tags: ${{ vars.ECR_REPOSITORY_URL }}:${{ github.sha }}
+
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - run: uv python install 3.13
+      - run: uv sync --all-extras
+
+      - name: Run migrations against production
+        env:
+          TRIALRAG_DATABASE_URL: ${{ secrets.TRIALRAG_PROD_DATABASE_URL }}
+        run: uv run trialrag migrate-db
+
+      - name: Capture current image (for rollback) and deploy the new one
+        id: deploy
+        run: |
+          set -euo pipefail
+          SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
+          NEW_IMAGE="${{ vars.ECR_REPOSITORY_URL }}:${{ github.sha }}"
+
+          aws apprunner describe-service --service-arn "$SERVICE_ARN" \
+            --query 'Service.SourceConfiguration' --output json > current_config.json
+
+          PREVIOUS_IMAGE=$(jq -r '.ImageRepository.ImageIdentifier' current_config.json)
+          echo "previous_image=$PREVIOUS_IMAGE" >> "$GITHUB_OUTPUT"
+
+          # update-service replaces the whole SourceConfiguration, not a
+          # patch -- round-trip the current config and only touch the
+          # image tag, or port/env-vars/secrets would silently reset.
+          jq --arg img "$NEW_IMAGE" '.ImageRepository.ImageIdentifier = $img' \
+            current_config.json > new_config.json
+
+          aws apprunner update-service --service-arn "$SERVICE_ARN" \
+            --source-configuration file://new_config.json
+
+      - name: Wait for the deployment to finish
+        run: |
+          set -euo pipefail
+          SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
+          for _ in $(seq 1 60); do
+            STATUS=$(aws apprunner describe-service --service-arn "$SERVICE_ARN" \
+              --query 'Service.Status' --output text)
+            echo "status: $STATUS"
+            if [ "$STATUS" = "RUNNING" ]; then exit 0; fi
+            if [ "$STATUS" != "OPERATION_IN_PROGRESS" ]; then
+              echo "Unexpected status: $STATUS"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "Timed out waiting for RUNNING status"
+          exit 1
+
+      - name: Smoke test
+        id: smoke
+        run: |
+          SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
+          URL="https://$(aws apprunner describe-service --service-arn "$SERVICE_ARN" \
+            --query 'Service.ServiceUrl' --output text)"
+          curl -f --max-time 10 "$URL/healthz"
+          curl -f --max-time 10 "$URL/readyz"
+
+      - name: Roll back on failure
+        if: failure() && steps.deploy.outputs.previous_image != ''
+        run: |
+          set -euo pipefail
+          SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
+          PREVIOUS_IMAGE="${{ steps.deploy.outputs.previous_image }}"
+          echo "Rolling back to $PREVIOUS_IMAGE"
+          jq --arg img "$PREVIOUS_IMAGE" '.ImageRepository.ImageIdentifier = $img' \
+            current_config.json > rollback_config.json
+          aws apprunner update-service --service-arn "$SERVICE_ARN" \
+            --source-configuration file://rollback_config.json
