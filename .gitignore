@@ -49,6 +49,9 @@ crash.log
 loadtest/results/*.json
 !loadtest/results/.gitkeep
 
+# --- Eval run output (ephemeral; baseline.json is the tracked reference) ---
+evals/results/latest.json
+
 # --- OS / editors ---
 .DS_Store
 Thumbs.db

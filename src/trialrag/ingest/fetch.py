@@ -20,7 +20,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import time
 from collections.abc import AsyncIterator, Iterable, Mapping, Sequence
 from dataclasses import dataclass, field
 from typing import Any, Final, Self
@@ -32,6 +31,8 @@ from tenacity import (
     stop_after_attempt,
     wait_exponential_jitter,
 )
+
+from trialrag.ratelimit import TokenBucket
 
 logger = logging.getLogger(__name__)
 
@@ -86,44 +87,6 @@ def _is_retryable(exc: BaseException) -> bool:
     if isinstance(exc, httpx.HTTPStatusError):
         return exc.response.status_code in _RETRY_STATUSES
     return isinstance(exc, httpx.TransportError)
-
-
-# ---------------------------------------------------------------------------
-# Rate limiting
-# ---------------------------------------------------------------------------
-
-
-class TokenBucket:
-    """Async token bucket.
-
-    Chosen over a fixed sleep between calls because it permits a short burst
-    after an idle stretch while still holding the long-run average under the
-    limit -- which is exactly the shape of a resumed ingest.
-    """
-
-    def __init__(self, rate_per_minute: float, *, capacity: float | None = None) -> None:
-        if rate_per_minute <= 0:
-            raise ValueError("rate_per_minute must be positive")
-        self._rate = rate_per_minute / 60.0
-        self._capacity = capacity if capacity is not None else max(1.0, rate_per_minute / 10.0)
-        self._tokens = self._capacity
-        self._updated = time.monotonic()
-        self._lock = asyncio.Lock()
-
-    async def acquire(self, tokens: float = 1.0) -> None:
-        while True:
-            async with self._lock:
-                now = time.monotonic()
-                self._tokens = min(
-                    self._capacity, self._tokens + (now - self._updated) * self._rate
-                )
-                self._updated = now
-                if self._tokens >= tokens:
-                    self._tokens -= tokens
-                    return
-                deficit = tokens - self._tokens
-                wait_for = deficit / self._rate
-            await asyncio.sleep(wait_for)
 
 
 # ---------------------------------------------------------------------------

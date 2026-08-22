@@ -1,0 +1,14 @@
+-- Runs once, on first container creation (the postgres image only executes
+-- /docker-entrypoint-initdb.d/* against a brand-new data directory).
+--
+-- A dedicated test database, separate from `trialrag` (the dev/ingest
+-- database), is not optional: tests/integration/conftest.py's `db` fixture
+-- does DROP SCHEMA public CASCADE before every test to guarantee isolation
+-- between tests. Pointed at the same database a `trialrag ingest` run is
+-- writing to, that DROP silently destroyed ~30 real API calls' worth of
+-- embedded corpus mid-run -- the process itself didn't crash (Postgres
+-- doesn't care that the tables it's inserting into were just recreated), it
+-- just kept going against empty tables, which made the data loss invisible
+-- until the row counts were checked. This file exists so that failure mode
+-- cannot happen again from a fresh `docker compose up`.
+CREATE DATABASE trialrag_test OWNER trialrag;
