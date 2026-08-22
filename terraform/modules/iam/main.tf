@@ -16,6 +16,15 @@ variable "ecr_repository_arn" {
   type = string
 }
 
+locals {
+  # Split once, reused by the sub wildcard below -- GitHub's real subject
+  # claim inserts a numeric ID between each name and the delimiter that
+  # follows it (owner@id/repo@id), so the wildcard has to sit right after
+  # each bare name, not after the whole "owner/repo" string.
+  github_owner = split("/", var.github_repo)[0]
+  github_name  = split("/", var.github_repo)[1]
+}
+
 # ---------------------------------------------------------------------------
 # GitHub OIDC: no long-lived AWS keys stored in GitHub secrets for deploy.yml.
 # Thumbprint is fetched live rather than hardcoded -- GitHub has rotated its
@@ -32,18 +41,24 @@ resource "aws_iam_openid_connect_provider" "github" {
   thumbprint_list = [data.tls_certificate.github.certificates[0].sha1_fingerprint]
 }
 
-# Scoped to `main` -- both deploy.yml's triggers (push and workflow_dispatch)
-# resolve to the same `ref:refs/heads/main` subject when run against that
-# branch, so one condition value covers both.
+# Scoped to `main` via the separate `repository`/`ref` claims, not the
+# composite `sub` string -- confirmed live (see the decoded token dumped by a
+# temporary debug step) that GitHub now embeds numeric owner/repo IDs
+# straight into `sub`, e.g. `repo:brannon-white@141594485/Rag-pipeline@1342258430:ref:...`,
+# not the plain `repo:owner/repo:ref:...` every tutorial assumes. A trust
+# policy built on that assumption never matches. `repository` and `ref` are
+# separate top-level claims on the same token and don't have this problem;
+# conditioning on those directly is also just more robust against any future
+# `sub` format change, not merely a workaround for this one.
 #
-# sts:TagSession is required here, not just AssumeRoleWithWebIdentity --
+# sts:TagSession is required here too, not just AssumeRoleWithWebIdentity --
 # aws-actions/configure-aws-credentials tags the assumed session with GitHub
 # context by default (repo, actor, workflow, ...) unless
 # `role-skip-session-tagging: true` is set. Without this action allowed, AWS
-# rejects the *entire* AssumeRoleWithWebIdentity call, surfacing only as a
-# generic "Not authorized to perform sts:AssumeRoleWithWebIdentity" with no
-# mention of tagging anywhere in the error -- confirmed live, this is exactly
-# what broke the first real deploy.yml run.
+# rejects the *entire* AssumeRoleWithWebIdentity call with no mention of
+# tagging anywhere in the error. Both this and the sub-format issue above
+# were hit in the same real deploy.yml debugging session; both needed fixing
+# before OIDC auth actually succeeded.
 data "aws_iam_policy_document" "github_deploy_trust" {
   statement {
     effect  = "Allow"
@@ -62,8 +77,28 @@ data "aws_iam_policy_document" "github_deploy_trust" {
 
     condition {
       test     = "StringEquals"
+      variable = "token.actions.githubusercontent.com:repository"
+      values   = [var.github_repo]
+    }
+
+    condition {
+      test     = "StringEquals"
+      variable = "token.actions.githubusercontent.com:ref"
+      values   = ["refs/heads/main"]
+    }
+
+    # AWS's own IAM validation rejects a GitHub OIDC trust policy that
+    # doesn't condition on `sub` (or `job_workflow_ref`) at all -- confirmed
+    # live: dropping this in favor of the repository/ref conditions above
+    # fails apply with "must evaluate ... sub ... which is not scoped to
+    # all." The wildcard sits right after each bare name (not after the
+    # whole "owner/repo" string) so it lines up with where GitHub actually
+    # inserts the numeric ID -- a single trailing `*` would never match
+    # "owner@id/repo@id" at all, only "owner/repo@id".
+    condition {
+      test     = "StringLike"
       variable = "token.actions.githubusercontent.com:sub"
-      values   = ["repo:${var.github_repo}:ref:refs/heads/main"]
+      values   = ["repo:${local.github_owner}*/${local.github_name}*:ref:refs/heads/main"]
     }
   }
 }
