@@ -40,6 +40,13 @@ jobs:
           platforms: linux/amd64 # App Runner runs x86_64, not this runner's/Mac's arm64
           push: true
           tags: ${{ vars.ECR_REPOSITORY_URL }}:${{ github.sha }}
+          # v6 defaults to pushing a build-provenance attestation alongside
+          # the image manifest -- two pushes against one tag, which collided
+          # with ECR's IMMUTABLE tag policy on a real run (the attestation
+          # push landed, the image push then hit "tag already exists").
+          # ECR's own vulnerability scan-on-push already covers what
+          # provenance attestation would add here; not worth the collision risk.
+          provenance: false
 
       - uses: astral-sh/setup-uv@v4
         with:
