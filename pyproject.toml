@@ -1,0 +1,159 @@
+[project]
+name = "trialrag"
+version = "0.1.0"
+description = "Production-grade, evaluated RAG system over ClinicalTrials.gov protocols"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "Brannon White" }]
+
+dependencies = [
+    # --- API ---
+    "fastapi>=0.118",
+    "uvicorn[standard]>=0.37",
+    "sse-starlette>=3.0",
+    # --- Config / models ---
+    "pydantic>=2.11",
+    "pydantic-settings>=2.10",
+    # --- Data access ---
+    "asyncpg>=0.30",
+    "pgvector>=0.4",
+    # --- HTTP ---
+    "httpx>=0.28",
+    "tenacity>=9.1",
+    # --- LLM / embeddings ---
+    "anthropic>=0.69",
+    "voyageai>=0.3",
+    # --- Storage ---
+    "boto3>=1.40",
+    # --- Observability ---
+    "structlog>=25.4",
+    "opentelemetry-sdk>=1.37",
+    "opentelemetry-exporter-otlp-proto-http>=1.37",
+    "opentelemetry-instrumentation-fastapi>=0.58b0",
+    "opentelemetry-instrumentation-asyncpg>=0.58b0",
+    "prometheus-client>=0.23",
+    # --- CLI ---
+    "typer>=0.19",
+    "rich>=14.1",
+    "orjson>=3.11",
+]
+
+[project.optional-dependencies]
+# Eval-only deps. Kept out of the runtime image: the API container must not
+# carry the judge stack (image size, attack surface, and Ragas' churn).
+evals = [
+    "numpy>=2.3",
+    "pandas>=2.3",
+    "ragas==0.4.0",          # pinned hard: their 0.x API has broken twice
+    "scikit-learn>=1.7",     # Cohen's kappa for judge calibration
+]
+
+[project.scripts]
+trialrag = "trialrag.cli:app"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14",
+    "mypy>=1.18",
+    "pytest>=8.4",
+    "pytest-asyncio>=1.2",
+    "pytest-cov>=7.0",
+    "pytest-recording>=0.13",   # VCR cassettes: hermetic, free, no network in CI
+    "hypothesis>=6.140",
+    "pip-audit>=2.9",
+    "pre-commit>=4.3",
+    "types-boto3>=1.40",
+]
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trialrag"]
+
+[tool.uv]
+package = true
+
+# ---------------------------------------------------------------------------
+# Lint / format
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["src", "tests", "evals"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",    # pycodestyle
+    "F",         # pyflakes
+    "I",         # isort
+    "N",         # pep8-naming
+    "UP",        # pyupgrade
+    "B",         # bugbear
+    "A",         # builtins shadowing
+    "C4",        # comprehensions
+    "DTZ",       # naive datetimes -- real bug source in a system that logs timestamps
+    "T20",       # no print() in library code
+    "SIM",       # simplify
+    "PTH",       # pathlib over os.path
+    "RUF",
+    "ASYNC",     # async antipatterns (blocking calls in async defs)
+    "S",         # bandit security checks
+]
+ignore = [
+    "S101",      # assert: fine in tests, and we use it for invariants
+    "E501",      # line length is handled by the formatter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S", "T20"]
+"evals/*" = ["T20"]           # eval scripts are CLIs; printing is the point
+"src/trialrag/cli.py" = ["T20"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["trialrag"]
+
+# ---------------------------------------------------------------------------
+# Types
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+plugins = ["pydantic.mypy"]
+mypy_path = "src"
+packages = ["trialrag"]
+
+[[tool.mypy.overrides]]
+module = ["voyageai.*", "pgvector.*", "ragas.*"]
+ignore_missing_imports = true
+# These packages ship no py.typed and re-export from private submodules without
+# an __all__, which strict mode's no_implicit_reexport rejects. Scoped to third
+# parties only -- our own code stays under full strict checking.
+implicit_reexport = true
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-q --strict-markers --strict-config"
+markers = [
+    "integration: requires a live Postgres (docker-compose or a Neon branch)",
+    "network: hits a real external API; skipped unless --record-mode is set",
+]
+filterwarnings = ["error::DeprecationWarning:trialrag.*"]
+
+[tool.coverage.run]
+source = ["src/trialrag"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "raise NotImplementedError"]

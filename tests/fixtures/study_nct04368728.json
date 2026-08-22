@@ -1,0 +1,2980 @@
+{
+ "protocolSection": {
+  "identificationModule": {
+   "nctId": "NCT04368728",
+   "orgStudyIdInfo": {
+    "id": "C4591001"
+   },
+   "secondaryIdInfos": [
+    {
+     "id": "2020-002641-42",
+     "type": "EUDRACT_NUMBER"
+    }
+   ],
+   "organization": {
+    "fullName": "BioNTech SE",
+    "class": "INDUSTRY"
+   },
+   "briefTitle": "Study to Describe the Safety, Tolerability, Immunogenicity, and Efficacy of RNA Vaccine Candidates Against COVID-19 in Healthy Individuals",
+   "officialTitle": "A PHASE 1/2/3, PLACEBO-CONTROLLED, RANDOMIZED, OBSERVER-BLIND, DOSE-FINDING STUDY TO EVALUATE THE SAFETY, TOLERABILITY, IMMUNOGENICITY, AND EFFICACY OF SARS-COV-2 RNA VACCINE CANDIDATES AGAINST COVID-19 IN HEALTHY INDIVIDUALS"
+  },
+  "statusModule": {
+   "statusVerifiedDate": "2026-03",
+   "overallStatus": "COMPLETED",
+   "expandedAccessInfo": {
+    "hasExpandedAccess": false
+   },
+   "startDateStruct": {
+    "date": "2020-04-29",
+    "type": "ACTUAL"
+   },
+   "primaryCompletionDateStruct": {
+    "date": "2023-02-10",
+    "type": "ACTUAL"
+   },
+   "completionDateStruct": {
+    "date": "2023-02-10",
+    "type": "ACTUAL"
+   },
+   "studyFirstSubmitDate": "2020-04-27",
+   "studyFirstSubmitQcDate": "2020-04-29",
+   "studyFirstPostDateStruct": {
+    "date": "2020-04-30",
+    "type": "ACTUAL"
+   },
+   "resultsFirstSubmitDate": "2024-02-09",
+   "resultsFirstSubmitQcDate": "2026-03-03",
+   "resultsFirstPostDateStruct": {
+    "date": "2026-03-25",
+    "type": "ACTUAL"
+   },
+   "lastUpdateSubmitDate": "2026-03-03",
+   "lastUpdatePostDateStruct": {
+    "date": "2026-03-25",
+    "type": "ACTUAL"
+   }
+  },
+  "sponsorCollaboratorsModule": {
+   "responsibleParty": {
+    "type": "SPONSOR"
+   },
+   "leadSponsor": {
+    "name": "BioNTech SE",
+    "class": "INDUSTRY"
+   },
+   "collaborators": [
+    {
+     "name": "Pfizer",
+     "class": "INDUSTRY"
+    }
+   ]
+  },
+  "oversightModule": {
+   "oversightHasDmc": true,
+   "isFdaRegulatedDrug": true,
+   "isFdaRegulatedDevice": false
+  },
+  "descriptionModule": {
+   "briefSummary": "This is a Phase 1/2/3, randomized, placebo-controlled, observer-blind, dose-finding, vaccine candidate-selection, and efficacy study in healthy individuals.\n\nThe study consists of 2 parts: Phase 1: to identify preferred vaccine candidate(s) and dose level(s); Phase 2/3: an expanded cohort and efficacy part.\n\nThe study will evaluate the safety, tolerability, and immunogenicity of 3 different SARS-CoV-2 RNA vaccine candidates against COVID-19 and the efficacy of 1 candidate:\n\n* As a 2-dose (separated by 21 days) schedule;\n* At various different dose levels in Phase 1;\n* As a booster;\n* In 3 age groups (Phase 1: 18 to 55 years of age, 65 to 85 years of age; Phase 2/3: \u226512 years of age \\[stratified as 12-15, 16-55 or \\>55 years of age\\]).\n\nThe candidate selected for efficacy evaluation in Phase 2/3 is BNT162b2 at a dose of 30 \u00b5g.\n\nParticipants who originally received placebo will be offered the opportunity to receive BNT162b2 at defined points as part of the study.\n\nIn order to describe the boostability of BNT162, and potential heterologous protection against emerging SARS-CoV-2 VOCs, an additional dose of BNT162b2 at 30 \u00b5g will be given to Phase 1 participants approximately 6 to 12 months after their second dose of BNT162b1 or BNT162b2. This will provide an early assessment of the safety of a third dose of BNT162, as well as its immunogenicity.\n\nThe assessment of boostability will be further expanded in a subset of Phase 3 participants at selected sites in the US who will receive a third dose of BNT162b2 at 30 \u00b5g or a third and potentially a fourth dose of prototype BNT162b2VOC at 30 \u00b5g (BNT162b2s01, based upon the South African variant and hereafter referred to as BNT162b2SA). A further subset of Phase 3 participants will receive a third, lower, dose of BNT162b2 at 5 or 10 \u00b5g.\n\nTo further describe potential homologous and heterologous protection against emerging SARS-CoV-2 VOCs, a new cohort of participants will be enrolled who are COVID-19 vaccine-na\u00efve (ie, BNT162b2-na\u00efve) and have not experienced COVID-19. They will receive BNT162b2SA given as a 2-dose series, separated by 21 days.\n\nTo reflect current and anticipated recommendations for COVID 19 vaccine boosters, participants in C4591001 who meet specified recommendations and have not already received one, will be offered a third dose of BNT162b2 after their second dose of BNT162."
+  },
+  "conditionsModule": {
+   "conditions": [
+    "SARS-CoV-2 Infection",
+    "COVID-19"
+   ],
+   "keywords": [
+    "COVID-19",
+    "Coronavirus",
+    "Vaccine",
+    "SARS-CoV-2",
+    "RNA Vaccine"
+   ]
+  },
+  "designModule": {
+   "studyType": "INTERVENTIONAL",
+   "phases": [
+    "PHASE2",
+    "PHASE3"
+   ],
+   "designInfo": {
+    "allocation": "RANDOMIZED",
+    "interventionModel": "PARALLEL",
+    "primaryPurpose": "PREVENTION",
+    "maskingInfo": {
+     "masking": "TRIPLE",
+     "whoMasked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR"
+     ]
+    }
+   },
+   "enrollmentInfo": {
+    "count": 46969,
+    "type": "ACTUAL"
+   }
+  },
+  "armsInterventionsModule": {
+   "armGroups": [
+    {
+     "label": "10 \u00b5g dose, 18-55 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "20 \u00b5g dose, 18-55 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "30 \u00b5g dose, 18-55 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "10 \u00b5g dose, 65-85 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "20 \u00b5g dose, 65-85 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "30 \u00b5g dose, 65-85 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1",
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "30 \u00b5g dose, \u226512 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Placebo, 18-55 years of age",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Other: Placebo"
+     ]
+    },
+    {
+     "label": "Placebo, 65-85 years of age",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Other: Placebo"
+     ]
+    },
+    {
+     "label": "Placebo, \u226512 years of age",
+     "type": "PLACEBO_COMPARATOR",
+     "interventionNames": [
+      "Other: Placebo"
+     ]
+    },
+    {
+     "label": "100 \u00b5g dose, 18-55 years of age (2 doses)",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b1"
+     ]
+    },
+    {
+     "label": "Vaccination of Placebo recipients with BNT162b2 - Stage 1",
+     "type": "OTHER",
+     "description": "Participants \u226516 years of age who originally received placebo and are eligible for COVID-19 vaccination following any local or national recommendations will be offered the opportunity to receive BNT162b2 as part of the study.",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Vaccination of placebo recipients with BNT162b2 - Stage 2",
+     "type": "OTHER",
+     "description": "Participants \u226516 years of age who originally received placebo will be offered the opportunity to receive BNT162b2 at defined points as part of the study.",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Booster vaccination of Phase 1 participants with BNT162b2 at a dose of 30 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 30 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Booster vaccination of Phase 3 participants with BNT162b2SA at a dose of 30 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2SA"
+     ]
+    },
+    {
+     "label": "Vaccination of BNT162b2-naive participants with BNT162b2SA at a dose of 30 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2SA"
+     ]
+    },
+    {
+     "label": "Booster and further vaccination of Phase 3 participants with BNT162b2SA at a dose of 30 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2SA"
+     ]
+    },
+    {
+     "label": "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 5 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    },
+    {
+     "label": "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 10 \u00b5g",
+     "type": "EXPERIMENTAL",
+     "interventionNames": [
+      "Biological: BNT162b2"
+     ]
+    }
+   ],
+   "interventions": [
+    {
+     "type": "BIOLOGICAL",
+     "name": "BNT162b1",
+     "description": "Intramuscular injection",
+     "armGroupLabels": [
+      "10 \u00b5g dose, 18-55 years of age (2 doses)",
+      "10 \u00b5g dose, 65-85 years of age (2 doses)",
+      "100 \u00b5g dose, 18-55 years of age (2 doses)",
+      "20 \u00b5g dose, 18-55 years of age (2 doses)",
+      "20 \u00b5g dose, 65-85 years of age (2 doses)",
+      "30 \u00b5g dose, 18-55 years of age (2 doses)",
+      "30 \u00b5g dose, 65-85 years of age (2 doses)"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "BNT162b2",
+     "description": "Intramuscular injection",
+     "armGroupLabels": [
+      "10 \u00b5g dose, 18-55 years of age (2 doses)",
+      "10 \u00b5g dose, 65-85 years of age (2 doses)",
+      "20 \u00b5g dose, 18-55 years of age (2 doses)",
+      "20 \u00b5g dose, 65-85 years of age (2 doses)",
+      "30 \u00b5g dose, 18-55 years of age (2 doses)",
+      "30 \u00b5g dose, 65-85 years of age (2 doses)",
+      "30 \u00b5g dose, \u226512 years of age (2 doses)",
+      "Booster vaccination of Phase 1 participants with BNT162b2 at a dose of 30 \u00b5g",
+      "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 10 \u00b5g",
+      "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 30 \u00b5g",
+      "Booster vaccination of Phase 3 participants with BNT162b2 at a dose of 5 \u00b5g",
+      "Vaccination of Placebo recipients with BNT162b2 - Stage 1",
+      "Vaccination of placebo recipients with BNT162b2 - Stage 2"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "name": "Placebo",
+     "description": "Intramuscular injection",
+     "armGroupLabels": [
+      "Placebo, 18-55 years of age",
+      "Placebo, 65-85 years of age",
+      "Placebo, \u226512 years of age"
+     ]
+    },
+    {
+     "type": "BIOLOGICAL",
+     "name": "BNT162b2SA",
+     "description": "Intramuscular injection",
+     "armGroupLabels": [
+      "Booster and further vaccination of Phase 3 participants with BNT162b2SA at a dose of 30 \u00b5g",
+      "Booster vaccination of Phase 3 participants with BNT162b2SA at a dose of 30 \u00b5g",
+      "Vaccination of BNT162b2-naive participants with BNT162b2SA at a dose of 30 \u00b5g"
+     ]
+    }
+   ]
+  },
+  "outcomesModule": {
+   "primaryOutcomes": [
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 1: Phase 1",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an electronic diary (e-diary). Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 centimeter (cm). Redness and swelling were graded as mild (greater than \\[\\>\\] 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 2: Phase 1",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 days after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 1: Phase 1",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 hours\\[h\\]), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 2: Phase 1",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 days after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From Dose 1 to 1 Month After Dose 2: Phase 1",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. For BNT162b1 100 mcg, participants received one dose of 100 mcg, followed by one dose of 10 mcg.",
+     "timeFrame": "From Dose 1 to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From Dose 1 to 6 Months After Dose 2: Phase 1",
+     "description": "An SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. For BNT162b1 100 mcg, participants received one dose of 100 mcg, followed by one dose of 10 mcg.",
+     "timeFrame": "From Dose 1 to 6 Months After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Hematology Parameters 1 Day After Dose 1: Phase 1",
+     "description": "Hematology parameters that were assessed included hemoglobin, hematocrit, erythrocytes, Ery. mean corpuscular volume, Ery. mean corpuscular hemoglobin, Ery. mean corpuscular HGB concentration, platelets, leukocytes, lymphocytes, neutrophils, basophils, eosinophils and monocytes. Abnormal parameters were determined by following criteria: Hemoglobin : \\<0.8x lower limit of normal (LLN), Hematocrit : \\<0.8x LLN, Erythrocytes : \\<0.8x LLN, Ery. Mean Corpuscular Volume: \\<0.9x LLN, Ery. Mean Corpuscular Hemoglobin : \\<0.9x LLN Ery. Mean Corpuscular HGB Concentration : \\<0.9x LLN, Platelets : \\<0.5x LLN, Leukocytes : \\<0.6x LLN, Lymphocytes : \\<0.8x LLN, Neutrophils : \\<0.8x LLN, Basophils: \\>1.2x upper limit of normal (ULN), Eosinophils \\>1.2x ULN, Monocytes \\>1.2x ULN. Only parameters with abnormal values were reported in this outcome measure.",
+     "timeFrame": "1 Day After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Hematology Parameters 7 Days After Dose 1: Phase 1",
+     "description": "Hematology parameters that were assessed included hemoglobin, hematocrit, erythrocytes, Ery. mean corpuscular volume, Ery. mean corpuscular hemoglobin, Ery. mean corpuscular HGB concentration, platelets, leukocytes, lymphocytes, neutrophils, basophils, eosinophils and monocytes. Abnormal parameters were determined by following criteria: Hemoglobin : \\<0.8x LLN, Hematocrit : \\<0.8x LLN, Erythrocytes : \\<0.8x LLN, Ery. Mean Corpuscular Volume: \\<0.9x LLN, Ery. Mean Corpuscular Hemoglobin : \\<0.9x LLN Ery. Mean Corpuscular HGB Concentration : \\<0.9x LLN, Platelets : \\<0.5x LLN, Leukocytes : \\<0.6x LLN, Lymphocytes : \\<0.8x LLN, Neutrophils : \\<0.8x LLN, Basophils: \\>1.2x ULN, Eosinophils \\>1.2x ULN, Monocytes \\>1.2x ULN. Only parameters with abnormal values were reported in this outcome measure.",
+     "timeFrame": "7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Hematology Parameters Before Dose 2: Phase 1",
+     "description": "Hematology parameters that were assessed included hemoglobin, hematocrit, erythrocytes, Ery. mean corpuscular volume, Ery. mean corpuscular hemoglobin, Ery. mean corpuscular HGB concentration, platelets, leukocytes, lymphocytes, neutrophils, basophils, eosinophils and monocytes. Abnormal parameters were determined by following criteria: Hemoglobin : \\<0.8x LLN, Hematocrit : \\<0.8x LLN, Erythrocytes : \\<0.8x LLN, Ery. Mean Corpuscular Volume: \\<0.9x LLN, Ery. Mean Corpuscular Hemoglobin : \\<0.9x LLN Ery. Mean Corpuscular HGB Concentration : \\<0.9x LLN, Platelets : \\<0.5x LLN, Leukocytes : \\<0.6x LLN, Lymphocytes : \\<0.8x LLN, Neutrophils : \\<0.8x LLN, Basophils: \\>1.2x ULN, Eosinophils \\>1.2x ULN, Monocytes \\>1.2x ULN. Only parameters with abnormal values were reported in this outcome measure.",
+     "timeFrame": "Before Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Hematology Parameters 7 Days After Dose 2: Phase 1",
+     "description": "Hematology parameters that were assessed included hemoglobin, hematocrit, erythrocytes, Ery. mean corpuscular volume, Ery. mean corpuscular hemoglobin, Ery. mean corpuscular HGB concentration, platelets, leukocytes, lymphocytes, neutrophils, basophils, eosinophils and monocytes. Abnormal parameters were determined by following criteria: Hemoglobin : \\<0.8x LLN, Hematocrit : \\<0.8x LLN, Erythrocytes : \\<0.8x LLN, Ery. Mean Corpuscular Volume: \\<0.9x LLN, Ery. Mean Corpuscular Hemoglobin : \\<0.9x LLN Ery. Mean Corpuscular HGB Concentration : \\<0.9x LLN, Platelets : \\<0.5x LLN, Leukocytes : \\<0.6x LLN, Lymphocytes : \\<0.8x LLN, Neutrophils : \\<0.8x LLN, Basophils: \\>1.2x ULN, Eosinophils \\>1.2x ULN, Monocytes \\>1.2x ULN. Only parameters with abnormal values were reported in this outcome measure.",
+     "timeFrame": "7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Chemistry Parameters 1 Day After Dose 1: Phase 1",
+     "description": "Chemistry parameters that were assessed included bilirubin, aspartate aminotransferase (AST), alanine aminotransferase (ALT), alkaline phosphatase (ALP), urea nitrogen, creatinine. Abnormal parameters were determined by following criteria: bilirubin: \\>1.5x ULN, AST: \\>3.0x ULN, ALT: \\>3.0x ULN, ALP: \\>3.0x ULN, urea nitrogen: \\>1.3x ULN, creatinine: \\>1.3x ULN. Abnormal values reported for this outcome measure are for bilirubin.",
+     "timeFrame": "1 Day After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Chemistry Parameters 7 Days After Dose 1: Phase 1",
+     "description": "Chemistry parameters that were assessed included bilirubin, AST, ALT, ALP, urea nitrogen, creatinine. Abnormal parameters were determined by following criteria: bilirubin: \\>1.5x ULN, AST: \\>3.0x ULN, ALT: \\>3.0x ULN, ALP: \\>3.0x ULN, urea nitrogen: \\>1.3x ULN, creatinine: \\>1.3x ULN. Abnormal values reported for this outcome measure are for bilirubin.",
+     "timeFrame": "7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Chemistry Parameters Before Dose 2: Phase 1",
+     "description": "Chemistry parameters that were assessed included bilirubin, AST, ALT, ALP, urea nitrogen, creatinine. Abnormal parameters were determined by following criteria: bilirubin: \\>1.5x ULN, AST: \\>3.0x ULN, ALT: \\>3.0x ULN, ALP: \\>3.0x ULN, urea nitrogen: \\>1.3x ULN, creatinine: \\>1.3x ULN. Abnormal values reported for this outcome measure are for bilirubin.",
+     "timeFrame": "Before Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Abnormalities in Chemistry Parameters 7 Days After Dose 2: Phase 1",
+     "description": "Chemistry parameters that were assessed included bilirubin, AST, ALT, ALP, urea nitrogen, creatinine. Abnormal parameters were determined by following criteria: bilirubin: \\>1.5x ULN, AST: \\>3.0x ULN, ALT: \\>3.0x ULN, ALP: \\>3.0x ULN, urea nitrogen: \\>1.3x ULN, creatinine: \\>1.3x ULN. Abnormal values reported for this outcome measure are for bilirubin.",
+     "timeFrame": "7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Hematology Parameters 1 Day After Dose 1: Phase 1",
+     "description": "Percentage of participants with grade shift in hematology parameters reported in this outcome measure. Grade(G)1: Mild, G2:Moderate, G3:Severe, G4:potentially life threatening. Hemoglobin(Female): G1: 11.0 - 12.0grams per deciliter(g/dL), G2: 9.5 - 10.9, G3: 8.0 - 9.4, G4: \\<8.0. Hemoglobin(Male): G1: 12.5 - 13.5, G2: 10.5 - 12.4, G3: 8.5 - 10.4, G4: \\<8.5. WBC decrease(cells/mm3):G1: 2,500 - 3,500, G2: 1,500 - 2,499, G3: 1,000 - 1,499, G4: \\<1,000 Lymphocytes decrease(cells/mm3): G1: 750 - 1,000, G2: 500 - 749, G3: 250 - 499, G4: \\<250. Eosinophils(cells/mm3):G1: 650 - 1500, G2: 1501 - 5000, G3: \\>5000, G4:Hypereosinophilic. Platelets decreased(cells/mm3): G1: 125,000 - 140,000, G2: 100,000 - 124,000, G3: 25,000 - 99,000, G4: \\<25,000. Urea Nitrogen (mg/dl): G1: 23-26; G2:27-31; G3: \\>31; G4: requires dialysis. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "1 Day After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Hematology Parameters 7 Days After Dose 1: Phase 1",
+     "description": "Percentage of participants with grade shift in hematology parameters reported in this outcome measure. Grade(G)1: Mild, G2:Moderate, G3:Severe, G4:potentially life threatening. Hemoglobin(Female): G1: 11.0 - 12.0grams per deciliter(g/dL), G2: 9.5 - 10.9, G3: 8.0 - 9.4, G4: \\<8.0. Hemoglobin(Male): G1: 12.5 - 13.5, G2: 10.5 - 12.4, G3: 8.5 - 10.4, G4: \\<8.5. WBC decrease(cells/mm3):G1: 2,500 - 3,500, G2: 1,500 - 2,499, G3: 1,000 - 1,499, G4: \\<1,000 Lymphocytes decrease(cells/mm3): G1: 750 - 1,000, G2: 500 - 749, G3: 250 - 499, G4: \\<250. Eosinophils(cells/mm3):G1: 650 - 1500, G2: 1501 - 5000, G3: \\>5000, G4:Hypereosinophilic. Platelets decreased(cells/mm3): G1: 125,000 - 140,000, G2: 100,000 - 124,000, G3: 25,000 - 99,000, G4: \\<25,000. Urea Nitrogen (mg/dl): G1: 23-26; G2:27-31; G3: \\>31; G4: requires dialysis. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Hematology Parameters Before Dose 2: Phase 1",
+     "description": "Percentage of participants with grade shift in hematology parameters reported in this outcome measure. Grade(G)1: Mild, G2:Moderate, G3:Severe, G4:potentially life threatening. Hemoglobin(Female): G1: 11.0 - 12.0grams per deciliter(g/dL), G2: 9.5 - 10.9, G3: 8.0 - 9.4, G4: \\<8.0. Hemoglobin(Male): G1: 12.5 - 13.5, G2: 10.5 - 12.4, G3: 8.5 - 10.4, G4: \\<8.5. WBC decrease(cells/mm3):G1: 2,500 - 3,500, G2: 1,500 - 2,499, G3: 1,000 - 1,499, G4: \\<1,000 Lymphocytes decrease(cells/mm3): G1: 750 - 1,000, G2: 500 - 749, G3: 250 - 499, G4: \\<250. Eosinophils(cells/mm3):G1: 650 - 1500, G2: 1501 - 5000, G3: \\>5000, G4:Hypereosinophilic. Platelets decreased(cells/mm3): G1: 125,000 - 140,000, G2: 100,000 - 124,000, G3: 25,000 - 99,000, G4: \\<25,000. Urea Nitrogen (mg/dl): G1: 23-26; G2:27-31; G3: \\>31; G4: requires dialysis. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "Before Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Hematology Parameters 7 Days After Dose 2: Phase 1",
+     "description": "Percentage of participants with grade shift in hematology parameters reported in this outcome measure. Grade(G)1: Mild, G2:Moderate, G3:Severe, G4:potentially life threatening. Hemoglobin(Female): G1: 11.0 - 12.0grams per deciliter(g/dL), G2: 9.5 - 10.9, G3: 8.0 - 9.4, G4: \\<8.0. Hemoglobin(Male): G1: 12.5 - 13.5, G2: 10.5 - 12.4, G3: 8.5 - 10.4, G4: \\<8.5. WBC decrease(cells/mm3):G1: 2,500 - 3,500, G2: 1,500 - 2,499, G3: 1,000 - 1,499, G4: \\<1,000 Lymphocytes decrease(cells/mm3): G1: 750 - 1,000, G2: 500 - 749, G3: 250 - 499, G4: \\<250. Eosinophils(cells/mm3):G1: 650 - 1500, G2: 1501 - 5000, G3: \\>5000, G4:Hypereosinophilic. Platelets decreased(cells/mm3): G1: 125,000 - 140,000, G2: 100,000 - 124,000, G3: 25,000 - 99,000, G4: \\<25,000. Urea Nitrogen (mg/dl): G1: 23-26; G2:27-31; G3: \\>31; G4: requires dialysis. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Chemistry Parameters 1 Day After Dose 1: Phase 1",
+     "description": "Percentage of participants with grade shift in chemistry were reported in this outcome measure. G1: Mild, G2: Moderate, G3: Severe, G4: potentially life threatening. BUN(milligram per deciliter \\[mg/dL\\]): G1: 23 - 26, G2: 27 - 31, G3: \\>31, G4: required dialysis. Creatinine(mg/dL): G1: 1.5 - 1.7, G2: 1.8 - 2.0, G3: 2.1 - 2.5, G4: \\> 2.5 or required dialysis. Alkaline phosphate(increase by factor): G1: 1.1 - 2.0 x ULN G2: 2.1 - 3.0 x ULN G3: 3.1 -10 x ULN, G4: \\>10 x ULN. Liver function tests(ALT, AST increase by factor): G1: 1.1 - 2.5 x ULN G2: 2.6 - 5.0 x ULN G3: 5.1 - 10 x ULN, G4: \\>10 x ULN. Bilirubin(when accompanied by any increase in liver function test - increase by factor): G1: 1.1 - 1.25 x ULN G2: 1.26 - 1.5 x ULN G3: 1.51 - 1.75 x ULN, G4: \\>1.75 x ULN. Bilirubin(when liver function test is normal - increase by factor): G1: 1.1 - 1.5 x ULN, G2: 1.6 - 2.0 x ULN, G3: 2.0 - 3.0 x ULN, G4: \\>3.0 x ULN. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "1 Day After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Chemistry Parameters 7 Days After Dose 1: Phase 1",
+     "description": "Percentage of participants with grade shift in chemistry were reported in this outcome measure. G1: Mild, G2: Moderate, G3: Severe, G4: potentially life threatening. BUN(mg/dL): G1: 23 - 26, G2: 27 - 31, G3: \\>31, G4: required dialysis. Creatinine(mg/dL): G1: 1.5 - 1.7, G2: 1.8 - 2.0, G3: 2.1 - 2.5, G4: \\> 2.5 or required dialysis. Alkaline phosphate(increase by factor): G1: 1.1 - 2.0 x ULN G2: 2.1 - 3.0 x ULN G3: 3.1 -10 x ULN, G4: \\>10 x ULN. Liver function tests(ALT, AST increase by factor): G1: 1.1 - 2.5 x ULN G2: 2.6 - 5.0 x ULN G3: 5.1 - 10 x ULN, G4: \\>10 x ULN. Bilirubin(when accompanied by any increase in liver function test - increase by factor): G1: 1.1 - 1.25 x ULN G2: 1.26 - 1.5 x ULN G3: 1.51 - 1.75 x ULN, G4: \\>1.75 x ULN. Bilirubin(when liver function test is normal - increase by factor): G1: 1.1 - 1.5 x ULN, G2: 1.6 - 2.0 x ULN, G3: 2.0 - 3.0 x ULN, G4: \\>3.0 x ULN. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Chemistry Parameters Before Dose 2: Phase 1",
+     "description": "Percentage of participants with grade shift in chemistry were reported in this outcome measure. G1: Mild, G2: Moderate, G3: Severe, G4: potentially life threatening. BUN(mg/dL): G1: 23 - 26, G2: 27 - 31, G3: \\>31, G4: required dialysis. Creatinine(mg/dL): G1: 1.5 - 1.7, G2: 1.8 - 2.0, G3: 2.1 - 2.5, G4: \\> 2.5 or required dialysis. Alkaline phosphate(increase by factor): G1: 1.1 - 2.0 x ULN G2: 2.1 - 3.0 x ULN G3: 3.1 -10 x ULN, G4: \\>10 x ULN. Liver function tests(ALT, AST increase by factor): G1: 1.1 - 2.5 x ULN G2: 2.6 - 5.0 x ULN G3: 5.1 - 10 x ULN, G4: \\>10 x ULN. Bilirubin(when accompanied by any increase in liver function test - increase by factor): G1: 1.1 - 1.25 x ULN G2: 1.26 - 1.5 x ULN G3: 1.51 - 1.75 x ULN, G4: \\>1.75 x ULN. Bilirubin(when liver function test is normal - increase by factor): G1: 1.1 - 1.5 x ULN, G2: 1.6 - 2.0 x ULN, G3: 2.0 - 3.0 x ULN, G4: \\>3.0 x ULN. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "Before Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Grade Shift in Chemistry Parameters 7 Days After Dose 2: Phase 1",
+     "description": "Percentage of participants with grade shift in chemistry were reported in this outcome measure. G1: Mild, G2: Moderate, G3: Severe, G4: potentially life threatening. BUN(mg/dL): G1: 23 - 26, G2: 27 - 31, G3: \\>31, G4: required dialysis. Creatinine(mg/dL): G1: 1.5 - 1.7, G2: 1.8 - 2.0, G3: 2.1 - 2.5, G4: \\> 2.5 or required dialysis. Alkaline phosphate(increase by factor): G1: 1.1 - 2.0 x ULN G2: 2.1 - 3.0 x ULN G3: 3.1 -10 x ULN, G4: \\>10 x ULN. Liver function tests(ALT, AST increase by factor): G1: 1.1 - 2.5 x ULN G2: 2.6 - 5.0 x ULN G3: 5.1 - 10 x ULN, G4: \\>10 x ULN. Bilirubin(when accompanied by any increase in liver function test - increase by factor): G1: 1.1 - 1.25 x ULN G2: 1.26 - 1.5 x ULN G3: 1.51 - 1.75 x ULN, G4: \\>1.75 x ULN. Bilirubin(when liver function test is normal - increase by factor): G1: 1.1 - 1.5 x ULN, G2: 1.6 - 2.0 x ULN, G3: 2.0 - 3.0 x ULN, G4: \\>3.0 x ULN. Only parameters where grade shift was observed were reported.",
+     "timeFrame": "7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 1: Phase 2/3",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants or parents/legal guardians in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 Days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 2: Phase 2/3",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants or parents/legal guardians in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 Days after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 1: Phase 2/3",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 Days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 2: Phase 2/3",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 Days after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From Dose 1 to 1 Month After Dose 2: Phase 2/3",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "From Dose 1 to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From Dose 1 to 6 Months After Dose 2: Phase 2/3",
+     "description": "An SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "From Dose 1 to 6 Months After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 1: Phase 2",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 Days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 2: Phase 2",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain).",
+     "timeFrame": "Within 7 Days after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 1: Phase 2",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 Days after Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 2: Phase 2",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization).",
+     "timeFrame": "Within 7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From Dose 1 to 7 Days After Dose 2: Phase 2",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment.",
+     "timeFrame": "From Dose 1 to 7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From Dose 1 to 7 Days After Dose 2: Phase 2",
+     "description": "A SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events.",
+     "timeFrame": "From Dose 1 to 7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Booster Dose: BNT162b2 Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants or parents/legal guardians in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Booster Dose 1: BNT162b2 Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From First Booster Dose to 1 Month After Booster Dose: BNT162b2 Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. HIV positive participants were excluded.",
+     "timeFrame": "From First Booster Dose to 1 Month After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From First Booster Dose to 6 Months After Booster Dose: BNT162b2 Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose",
+     "description": "A SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. HIV positive participants were excluded.",
+     "timeFrame": "From First Booster Dose to 6 Months After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Booster Dose 1: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded from this analysis.",
+     "timeFrame": "Within 7 Days After Booster Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Booster Dose 2: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded from this analysis.",
+     "timeFrame": "Within 7 Days after Booster Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Booster Dose 1: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants excluded.",
+     "timeFrame": "Within 7 Days After Booster Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Booster Dose 2: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants excluded.",
+     "timeFrame": "Within 7 Days After Booster Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From First Booster Dose to 1 Month After Second Booster Dose: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. HIV positive participants were excluded.",
+     "timeFrame": "From First Booster Dose to 1 Month After Second Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From First Booster Dose to 5 Months After Second Booster Dose: BNT162b2 Experienced Participants Assigned to Receive 2 Booster Doses of BNT162b2SA",
+     "description": "An SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. HIV positive participants were excluded.",
+     "timeFrame": "From First Booster Dose to 5 Months After Second Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 1: BNT162b2 Naive Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Dose 2: BNT162b2 Naive Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 1: BNT162b2 Naive Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Dose 1"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Dose 2: BNT162b2 Naive Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 Days After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From Dose 1 to 1 Month After Dose 2: BNT162b2-Na\u00efve Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. HIV positive participants were excluded.",
+     "timeFrame": "From Dose 1 Through 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From Dose 1 to 6 Months After Dose 2: BNT162b2-Na\u00efve Participants Who Were Enrolled to Receive BNT162b2SA",
+     "description": "A SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. HIV positive participants were excluded.",
+     "timeFrame": "From Dose 1 to 6 Months After Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants With Local Reactions Within 7 Days After Booster Dose: BNT162b2-Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose of BNT162b2 (Lower Dose)",
+     "description": "Local reactions included redness, swelling and, pain at the injection site, recorded by participants in an e-diary. Redness and swelling were measured and recorded in measuring device units. 1 measuring device unit =0.5 cm. Redness and swelling were graded as mild (\\> 2.0 to 5.0 cm), moderate (\\> 5.0 to 10.0 cm), severe (\\>10.0 cm) and Grade 4 (necrosis or exfoliative dermatitis for redness and necrosis for swelling). Pain at injection site was graded as mild (does not interfere with activity), moderate (interferes with activity), severe (prevents daily activity) and Grade 4 (emergency room visit or hospitalization for severe pain). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 days After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants With Systemic Events Within 7 Days After Booster Dose: BNT162b2-Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose of BNT162b2 (Lower Dose)",
+     "description": "Systemic events included fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, new or worsened joint pain recorded by participants or parents/legal guardians of participants using e-diary. Fever=temperature \\>=38.0 deg C categorized as \\>=38.0 to 38.4, \\>38.4 to 38.9, \\>38.9 to 40.0 and \\>40.0 deg C. Fatigue, headache, chills, new or worsened muscle pain, new or worsened joint pain graded as mild (does not interfere with activity), moderate (some interference with activity), severe (prevents daily routine activity), Grade 4 (Emergency room visit/hospitalization). Vomiting: mild (1-2 times in 24 h), moderate (\\>2 times in 24 h), severe (requires IV hydration), Grade 4 (emergency room visit/hospitalization for hypotensive shock). Diarrhea: mild (2-3 loose stools in 24h), moderate (4-5 loose stools in 24 h), severe (\\>=6 loose stools in 24 h) and Grade 4 (emergency room visit/hospitalization). HIV positive participants were excluded.",
+     "timeFrame": "Within 7 days After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Adverse Events From Booster Dose to 1 Month After Booster Dose: BNT162b2-Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose of BNT162b2 (Lower Dose)",
+     "description": "An AE was any untoward medical occurrence in a participant, temporally associated with the use of study treatment, whether or not considered related to the study treatment. HIV positive participants were excluded.",
+     "timeFrame": "From Booster Dose to 1 Months After Booster Dose"
+    },
+    {
+     "measure": "Percentage of Participants Reporting Serious Adverse Events From Booster Dose to 6 Months After Booster Dose: BNT162b2-Experienced Participants Who Were Rerandomized to Receive 1 Booster Dose of BNT162b2 (Lower Dose)",
+     "description": "A SAE was any untoward medical occurrence that occurred, at any dose: resulted in death; required inpatient hospitalization or prolongation of existing hospitalization; was life-threatening; resulted in persistent or significant disability/ incapacity; was a congenital anomaly/birth defect and other important medical events. HIV positive participants were excluded.",
+     "timeFrame": "From Booster Dose to 6 Months after Booster Dose"
+    },
+    {
+     "measure": "COVID-19 Incidence Based on Central Laboratory or Locally Confirmed Nucleic Acid Amplification Test (NAAT) in Participants Without Serological or Virological Evidence: Phase 2/3",
+     "description": "Occurrences of first COVID-19 infection in participants followed up based on central laboratory or locally confirmed NAAT in participants, without serological or virological evidence of prior SARS-CoV-2 infection were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 6.247, Placebo - 6.003)"
+    },
+    {
+     "measure": "COVID-19 Incidence Based on Central Laboratory or Locally Confirmed Nucleic Acid Amplification Test (NAAT) in Participants Without Serological or Virological Evidence: Phase 2/3 (Analysis for EUA)",
+     "description": "Occurrences of first COVID-19 infection in participants followed up based on central laboratory or locally confirmed NAAT in participants, without serological or virological evidence of prior SARS-CoV-2 infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 2.214, Placebo - 2.222)"
+    },
+    {
+     "measure": "COVID-19 Incidence Based on Central Laboratory or Locally Confirmed Nucleic Acid Amplification Test (NAAT) in Participants With or Without Serological or Virological Evidence: Phase 2/3",
+     "description": "Occurrences of first COVID-19 infection in participants followed up based on central laboratory or locally confirmed NAAT in participants, with or without serological or virological evidence of prior SARS-CoV-2 infection were reported in this outcome measure.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 6.509, Placebo - 6.274)"
+    },
+    {
+     "measure": "COVID-19 Incidence Based on Central Laboratory or Locally Confirmed Nucleic Acid Amplification Test (NAAT) in Participants With or Without Serological or Virological Evidence: Phase 2/3 (Analysis for EUA)",
+     "description": "Occurrences of first COVID-19 infection in participants followed up based on central laboratory or locally confirmed NAAT in participants, with or without serological or virological evidence (analysis for EUA) of prior SARS-CoV-2 infection were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 2.332, Placebo - 2.345)"
+    },
+    {
+     "measure": "GMR Based on Geometric Mean Titer (N1a) - Comparison of 1 Month After Dose 2 Between Vaccine Groups: BNT162b2-Na\u00efve Participants Without Evidence of Infection (N1a) up to 1 Month After Dose 2: Phase 3",
+     "description": "GMR based on geometric mean titer, comparison of 1 month after dose 2 between vaccine groups: BNT162b2-naive participants without evidence of infection up to 1 month after dose 2 were reported in this outcome measure. HIV positive participants excluded from this analysis.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse Comparison (N1b) of 1 Month After Dose 2 Between Vaccine Groups: BNT162b2-Na\u00efve Participants Without Evidence of Infection up to 1 Month After Dose 2: Phase 3",
+     "description": "Seroresponse was defined as achieving a \\>=4-fold rise from baseline (before Dose 1). If the baseline measurement was below the lower limit of quantification (LLOQ), a post vaccination assay result \\>=4 \u00d7 LLOQ was considered a seroresponse. HIV positive participants excluded.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR of Neutralizing Titers (E1a) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants That Received a Booster Dose of BNT162b2: Phase 3",
+     "description": "GMR based on geometric mean titer, comparison of 1 month after booster dose to 1 month after dose 2 for BNT162b2-experienced participants were reported in this outcome measure. HIV positive participants excluded from this analysis.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (E1b) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants That Received a Booster Dose of BNT162b2: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse - comparison of 1 month after booster dose to 1 month after Dose 2 BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure. Seroresponse was defined as achieving a \\>=4-fold rise from baseline (before Dose 1). If the baseline measurement was below the LLOQ, a postvaccination assay result \\>=4 \u00d7 LLOQ was considered a seroresponse. HIV positive participants excluded.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR of Neutralizing Titers (E2a) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants: Phase 3",
+     "description": "GMR of neutralizing titers (E2a) for comparison of 1 month after booster dose to 1 month after dose 2: BNT162b2-experienced participants in Phase 3 were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (E2b) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse - comparison of 1 month after booster dose to 1 month after Dose 2 BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure. Seroresponse was defined as achieving a \\>=4-fold rise from baseline (before Dose 1). If the baseline measurement was below the LLOQ, a postvaccination assay result \\>=4 \u00d7 LLOQ was considered a seroresponse. HIV positive participants excluded.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    }
+   ],
+   "secondaryOutcomes": [
+    {
+     "measure": "Geometric Mean Titers (GMTs) of Severe Acute Respiratory Syndrome Coronavirus 2 Neutralizing Titers: Phase 1",
+     "description": "GMTs of severe acute respiratory syndrome coronavirus 2 neutralizing titers were reported in this outcome measure. SARS-CoV-2 neutralization assay - NT50 and SARS-CoV-2 neutralization assay - NT90 were evaluated and reported in this outcome measure.",
+     "timeFrame": "7, 21 days after Dose 1; 7, 14 days and 1, 6 months after Dose 2"
+    },
+    {
+     "measure": "Geometric Mean Concentrations (GMCs) of Severe Acute Respiratory Syndrome Coronavirus 2: S1-binding and RBD-binding IgG Level Assay: Phase 1",
+     "description": "GMCs of severe acute respiratory syndrome coronavirus S1-binding and RBD-binding IgG level were reported in this outcome measure.",
+     "timeFrame": "7, 21 days after Dose 1; 7, 14 days and 1, 6 months after Dose 2"
+    },
+    {
+     "measure": "Geometric Mean Fold Rise (GMFR) of SARS-CoV-2 Neutralizing Titers: Phase 1",
+     "description": "GMFR of SARS-CoV-2 neutralizing titers were reported in this outcome measure. HIV positive participants excluded.",
+     "timeFrame": "7, 21 days after Dose 1; 7, 14 days and 1, 6 months after Dose 2"
+    },
+    {
+     "measure": "Geometric Mean Fold Rise (GMFR) of SARS-CoV-2 S1-binding and RBD-binding IgG Level Assay: Phase 1",
+     "description": "GMFR of SARS-CoV-2 S1-binding and RBD-binding IgG level assay in Phase 1 were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "7, 21 days after Dose 1; 7, 14 days and 1, 6 months after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Achieving a >= 4-Fold Rise From Before Vaccination to After Vaccination: Neutralizing Titers: Phase 1",
+     "description": "Percentage of participants achieving a \\>= 4-fold rise from before vaccination to after vaccination: neutralizing titers in Phase 1 were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "7, 21 days after Dose 1; 7, 14 days and 1, 6 months after Dose 2"
+    },
+    {
+     "measure": "Percentage of Participants Achieving a >= 4-Fold Rise From Before Vaccination to After Vaccination: S1-binding and RBD-binding IgG Level Assay: Phase 1",
+     "description": "Percentage of participants achieving a \\>= 4-fold rise from before vaccination to after vaccination: S1-binding and RBD-binding IgG level assay in Phase 1 were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "From before vaccination to after vaccination"
+    },
+    {
+     "measure": "GMR Based on Reference Strain NT - Comparison of Participants 12 to 15 Years of Age to Participants 16 to 25 Years of Age- Participants Without Evidence of Infection up to 1 Month After Dose 2 - Dose 2 Evaluable Immunogenicity Population: Phase2/3",
+     "description": "GMR based on reference strain NT, comparison of participants 12 to 15 years of age to participants 16 to 25 years of age of participants without evidence of infection up to 1 month after dose 2 in Phase2/3 were reported in this outcome measure. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "Incidence of Asymptomatic SARS-CoV-2 Infection Per 1000 Person Years Follow-up Without Serological or Virological Evidence (Up to Start of Asymptomatic Surveillance Period) of Past Infection: Phase 3",
+     "description": "Incidence of asymptomatic SARS-CoV-2 infection per 1000 person years follow-up without serological or virological evidence (up to start of asymptomatic surveillance period) of past infection were reported in this outcome measure.",
+     "timeFrame": "From start of asymptomatic surveillance (Surveillance time [1000 person-years]: BNT162b2 - 0.383; Placebo - 0.200"
+    },
+    {
+     "measure": "Incidence of Asymptomatic SARS-CoV-2 Infection Per 1000 Person Years Follow-up Without Serological or Virological Evidence of Past Infection Based on N-binding Antibody Seroconversion: Phase 3",
+     "description": "Incidence of asymptomatic SARS-CoV-2 infection per 1000 person years follow-up without serological or virological evidence of past infection based on N-binding antibody seroconversion were reported in this outcome measure.",
+     "timeFrame": "From Dose 2 to the end of the surveillance period ([1000 person-years]: BNT162b2 - 13.840, Placebo - 6.481)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of Follow-up With or Without Evidence of Infection 7 Days After Second Dose of BNT162b2 Based on CDC-Defined Symptoms (Analysis for EUA): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up with or without the evidence of infection were reported in this outcome measure.",
+     "timeFrame": "From 7 Days After Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 2.330, Placebo - 2.343)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of Follow-up With or Without Evidence of Infection 14 Days After Second Dose of BNT162b2 Based on CDC-Defined Symptoms (Analysis for EUA): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up with or without the evidence of infection were reported in this outcome measure.",
+     "timeFrame": "From 14 Days After Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.983, Placebo - 1.993)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of Follow-up Without Evidence of Infection: 7 Days After Dose 2 Based on CDC Defined Symptoms (Analysis for EUA): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up without the evidence of infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 2.213; Placebo - 2.220)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of Follow-up Without Evidence of Infection: 14 Days After Dose 2 Based on CDC Defined Symptoms (Analysis for EUA): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up without the evidence of infection were reported in this outcome measure.",
+     "timeFrame": "From 14 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.886; Placebo - 1.891)"
+    },
+    {
+     "measure": "Severe COVID-19 Incidence Per 1000 Person-Years of Follow-up With or Without Evidence of Infection: 7 Days After Dose 2: Phase 3",
+     "description": "Severe COVID-19 incidence per 1000 person years follow-up with or without the evidence of infection were reported in this outcome measure.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 6.522; Placebo - 6.404)"
+    },
+    {
+     "measure": "Severe COVID-19 Incidence Per 1000 Person-Years of Follow-up With or Without Evidence of Infection: 14 Days After Dose 2 (Analysis for EUA): Phase 3",
+     "description": "Severe COVID-19 incidence per 1000 person years follow-up with or without the evidence of infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 14 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.985; Placebo - 2.007)"
+    },
+    {
+     "measure": "Severe COVID-19 Incidence Per 1000 Person-Years of Follow-up Without Evidence of Infection: 7 Days After Dose 2: Phase 3",
+     "description": "Severe COVID-19 incidence per 1000 person years follow-up without the evidence of infection were reported in this outcome measure.",
+     "timeFrame": "From 7 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 6.257; Placebo - 6.120)"
+    },
+    {
+     "measure": "Severe COVID-19 Incidence Per 1000 Person-Years of Follow-up Without Evidence of Infection: 14 Days After Dose 2 (Analysis for EUA): Phase 3",
+     "description": "Severe COVID-19 incidence per 1000 person years follow-up without the evidence of infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 14 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.888; Placebo - 1.901)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of With or Without Evidence of Infection: 14 Days After Dose 2 (EUA Analysis): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up with or without the evidence of infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 14 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.984; Placebo - 1.995)"
+    },
+    {
+     "measure": "COVID-19 Incidence Per 1000 Person-Years of Follow-up Without Evidence of Infection: 14 Days After Dose 2 (EUA Analysis): Phase 3",
+     "description": "COVID-19 incidence per 1000 person years follow-up without the evidence of infection (analysis for EUA) were reported in this outcome measure.",
+     "timeFrame": "From 14 days after Dose 2 (Surveillance time [1000 person-years]: BNT162b2 - 1.887; Placebo - 1.893)"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (Reference Strain) 1 Month After Second Dose in BNT162b2-Naive Participants: Phase 3",
+     "description": "Seroresponse was defined as achieving a \\>=4-fold rise from baseline (before Dose 1). If the baseline measurement was below the lower limit of quantification (LLOQ), a post vaccination assay result \\>=4 \u00d7 LLOQ was considered a seroresponse. HIV positive participants were excluded from this analysis.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR Based on Geometric Mean Titer (Reference Strain) 1 Month After Second Dose in BNT162b2-Naive Participants: Phase 3",
+     "description": "GMR based on GMT (Reference Strain) 1 month after second dose of BNT162b2SA and 1 month after the second dose of BNT162b2 in BNT162b2-naive participant were reported in this outcome measure.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR Based on Geometric Mean Titer of SA NT 1 Month After Second Dose of BNT162b2SA to 1 Month After the Second Dose (N2a) of BNT162b2 Naive Participants: Phase 3",
+     "description": "GMR based on geometric mean titer of SA NT 1 Month after second dose of BNT162b2SA to 1 Month after the second dose (N2a) of BNT162b2 naive participants of Phase 3 were reported in this outcome measure.",
+     "timeFrame": "1 month after the second dose"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (N2b) Comparison of 1 Month After Dose 2 Between Vaccine Groups: BNT162b2-Na\u00efve Participants Without Evidence of Infection up to 1 Month After Dose 2: Phase 3",
+     "description": "Seroresponse was defined as achieving a \\>=4-fold rise from baseline (before Dose 1). If the baseline measurement was below the LLOQ, a postvaccination assay result \\>=4 \u00d7 LLOQ was considered a seroresponse.",
+     "timeFrame": "1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR of Neutralizing Titers (E3a) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants That Received a Booster Dose of BNT162b2: Phase 3",
+     "description": "GMR of neutralizing titers (E3a) - comparison of 1 month after booster dose to 1 month after dose 2: BNT162b2-experienced participants of Phase 3 were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (E3b) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants That Received a Booster Dose of BNT162b2: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse (E3b) - comparison of 1 month after booster dose to 1 month after dose 2 BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "GMR of Neutralizing Titers (E4a) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants: Phase 3",
+     "description": "GMR of neutralizing titers (E4a) - comparison of 1 month after booster dose to 1 month after dose 2: BNT162b2-experienced participants of Phase 3 were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse (E4b) - Comparison of 1 Month After Booster Dose to 1 Month After Dose 2: BNT162b2-Experienced Participants: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse (E4b) - comparison of 1 month after booster dose to 1 month after dose 2 BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose to 1 Month After Dose 2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse for SA Variant NT Comparison of 1 Month After Second Booster Dose to 1 Month After Dose 2 of BNT162b2 in Participants Assigned to Receive 2 Booster Doses of BNT162b2SA: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse for SA variant NT comparison of 1 Month after second booster dose to 1 Month after Dose 2 of BNT162b2 in participants assigned to receive 2 booster doses of BNT162b2SA of Phase 3 were reported in this outcome measure.",
+     "timeFrame": "1 Month after Second Booster Dose to 1 Month After Dose 2 of BNT162b2"
+    },
+    {
+     "measure": "GMR of SA Variant NT 1 Month After Second Booster Dose to 1 Month After Dose 2 of BNT162b2 in Participants Assigned to Receive 2 Booster Doses of BNT1612b2SA: Phase 3",
+     "description": "GMR of SA variant NT 1 month after second booster dose to 1 month after dose 2 of BNT162b2 in participants assigned to receive 2 booster doses of BNT1612b2SA were reported in this outcome measure.",
+     "timeFrame": "1 Month After Second Booster Dose to 1 Month After Dose 2 of BNT162b2"
+    },
+    {
+     "measure": "Percentage Difference of Participants Achieving Seroresponse for SA Variant NT: BNT162b2-Experienced Participants Without Evidence of Infection up to 1 Month After Booster Dose Who Were Rerandomized to Receive 1 Booster Dose: Phase 3",
+     "description": "Percentage difference of participants achieving seroresponse for SA variant NT: BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose"
+    },
+    {
+     "measure": "GMR of SA Variant NT: BNT162b2-Experienced Participants Without Evidence of Infection up to 1 Month After Booster Dose Who Were Rerandomized to Receive 1 Booster Dose: Phase 3",
+     "description": "GMR of SA Variant NT: BNT162b2-experienced participants without evidence of infection up to 1 month after booster dose who were rerandomized to receive 1 booster dose were reported in this outcome measure.",
+     "timeFrame": "1 Month After Booster Dose"
+    }
+   ]
+  },
+  "eligibilityModule": {
+   "eligibilityCriteria": "Inclusion Criteria:\n\n\u2022 Male or female participants between the ages of 18 and 55 years, inclusive, 65 and 85 years, inclusive, or \u226512 years, inclusive, at randomization (dependent upon study phase). For the boostability and protection-against-VOCs subset: Existing participants enrolled to receive a third dose of BNT162b2 at 30 \u00b5g or BNT162b2SA; male or female participants between the ages of 18 and 55 years, inclusive, at rerandomization.\n\nNewly enrolled participants enrolled to receive 2 doses of BNT162b2SA; male or female participants between the ages of 18 and 55 years, inclusive, at enrollment.\n\nExisting participants enrolled to receive a third dose of BNT162b2 at 5 or 10 \u00b5g; male or female participants \u226518 years at rerandomization.\n\nNote that participants \\<18 years of age cannot be enrolled in the EU.\n\n* Participants who are willing and able to comply with all scheduled visits, vaccination plan, laboratory tests, lifestyle considerations, and other study procedures.\n* Healthy participants who are determined by medical history, physical examination, and clinical judgment of the investigator to be eligible for inclusion in the study.\n* Participants who, in the judgment of the investigator, are at risk for acquiring COVID-19.\n* Boostability and protection-against-VOCs existing participant subset only: Participants who provided a serum sample at Visit 3, with Visit 3 occurring within the protocol-specified window.\n* Capable of giving personal signed informed consent\n\nExclusion Criteria:\n\n* Other medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator's judgment, make the participant inappropriate for the study.\n* Phases 1 and 2 only: Known infection with human immunodeficiency virus (HIV), hepatitis C virus (HCV), or hepatitis B virus (HBV).\n* History of severe adverse reaction associated with a vaccine and/or severe allergic reaction (eg, anaphylaxis) to any component of the study intervention(s).\n* Receipt of medications intended to prevent COVID 19.\n* Previous clinical (based on COVID-19 symptoms/signs alone, if a SARS-CoV-2 NAAT result was not available) or microbiological (based on COVID-19 symptoms/signs and a positive SARS-CoV-2 NAAT result) diagnosis of COVID 19\n* Phase 1 only: Individuals at high risk for severe COVID-19, including those with any of the following risk factors:\n\n  * Hypertension\n  * Diabetes mellitus\n  * Chronic pulmonary disease\n  * Asthma\n  * Current vaping or smoking\n  * History of chronic smoking within the prior year\n  * BMI \\>30 kg/m2\n  * Anticipating the need for immunosuppressive treatment within the next 6 months\n* Phase 1 only: Individuals currently working in occupations with high risk of exposure to SARS-CoV-2 (eg, healthcare worker, emergency response personnel).\n* Immunocompromised individuals with known or suspected immunodeficiency, as determined by history and/or laboratory/physical examination.\n* Phase 1 only: Individuals with a history of autoimmune disease or an active autoimmune disease requiring therapeutic intervention.\n* Bleeding diathesis or condition associated with prolonged bleeding that would, in the opinion of the investigator, contraindicate intramuscular injection.\n* Women who are pregnant or breastfeeding.\n* Previous vaccination with any coronavirus vaccine.\n* Individuals who receive treatment with immunosuppressive therapy, including cytotoxic agents or systemic corticosteroids, eg, for cancer or an autoimmune disease, or planned receipt throughout the study.\n* Phase 1 only: Regular receipt of inhaled/nebulized corticosteroids.\n* Receipt of blood/plasma products or immunoglobulin, from 60 days before study intervention administration or planned receipt throughout the study.\n* Participation in other studies involving study intervention within 28 days prior to study entry through and including 6 months after the last dose of study intervention, with the exception of non-Pfizer interventional studies for prevention of COVID 19, which are prohibited throughout study participation.\n* Previous participation in other studies involving study intervention containing lipid nanoparticles.\n* Phase 1 only: Positive serological test for SARS-CoV-2 IgM and/or IgG antibodies at the screening visit.\n* Phase 1 only: Any screening hematology and/or blood chemistry laboratory value that meets the definition of a \u2265 Grade 1 abnormality.\n* Phase 1 only: Positive test for HIV, hepatitis B surface antigen (HBsAg), hepatitis B core antibodies (HBc Abs), or hepatitis C virus antibodies (HCV Abs) at the screening visit.\n* Phase 1 only: SARS-CoV-2 NAAT-positive nasal swab within 24 hours before receipt of study intervention.\n* Investigator site staff or Pfizer employees directly involved in the conduct of the study, site staff otherwise supervised by the investigator, and their respective family members.",
+   "healthyVolunteers": true,
+   "sex": "ALL",
+   "minimumAge": "12 Years",
+   "stdAges": [
+    "CHILD",
+    "ADULT",
+    "OLDER_ADULT"
+   ]
+  },
+  "contactsLocationsModule": {
+   "overallOfficials": [
+    {
+     "name": "Pfizer CT.gov Call Center",
+     "affiliation": "Pfizer",
+     "role": "STUDY_DIRECTOR"
+    }
+   ],
+   "locations": [
+    {
+     "facility": "North Alabama Research Center, LLC",
+     "city": "Athens",
+     "state": "Alabama",
+     "zip": "35611",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.80243,
+      "lon": -86.97219
+     }
+    },
+    {
+     "facility": "Birmingham Clinical Research Unit",
+     "city": "Birmingham",
+     "state": "Alabama",
+     "zip": "35216",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.52066,
+      "lon": -86.80249
+     }
+    },
+    {
+     "facility": "Medical Affiliated Research Center",
+     "city": "Huntsville",
+     "state": "Alabama",
+     "zip": "35801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.7304,
+      "lon": -86.58594
+     }
+    },
+    {
+     "facility": "Optimal Research, LLC",
+     "city": "Huntsville",
+     "state": "Alabama",
+     "zip": "35802",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.7304,
+      "lon": -86.58594
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Mobile",
+     "state": "Alabama",
+     "zip": "36608",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.69436,
+      "lon": -88.04305
+     }
+    },
+    {
+     "facility": "Chinle Comprehensive Health Care Facility",
+     "city": "Chinle",
+     "state": "Arizona",
+     "zip": "86503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.15445,
+      "lon": -109.55261
+     }
+    },
+    {
+     "facility": "Johns Hopkins Center for American Indian Health",
+     "city": "Chinle",
+     "state": "Arizona",
+     "zip": "86503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.15445,
+      "lon": -109.55261
+     }
+    },
+    {
+     "facility": "HOPE Research Institute",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85018",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "The Pain Center of Arizona",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85018",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "HOPE Research Institute",
+     "city": "Phoenix",
+     "state": "Arizona",
+     "zip": "85023",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.44838,
+      "lon": -112.07404
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Tempe",
+     "state": "Arizona",
+     "zip": "85281",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.41477,
+      "lon": -111.90931
+     }
+    },
+    {
+     "facility": "Johns Hopkins Center for American Indian Health",
+     "city": "Whiteriver",
+     "state": "Arizona",
+     "zip": "85941",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83699,
+      "lon": -109.96427
+     }
+    },
+    {
+     "facility": "Whiteriver Indian Hospital - Garrett Building",
+     "city": "Whiteriver",
+     "state": "Arizona",
+     "zip": "85941",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83699,
+      "lon": -109.96427
+     }
+    },
+    {
+     "facility": "Whiteriver Indian Hospital",
+     "city": "Whiteriver",
+     "state": "Arizona",
+     "zip": "85941",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83699,
+      "lon": -109.96427
+     }
+    },
+    {
+     "facility": "Anaheim Clinical Trials, LLC",
+     "city": "Anaheim",
+     "state": "California",
+     "zip": "92801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.83529,
+      "lon": -117.9145
+     }
+    },
+    {
+     "facility": "Collaborative Neuroscience Research, LLC. - Investigator Site File Location",
+     "city": "Garden Grove",
+     "state": "California",
+     "zip": "92845",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.77391,
+      "lon": -117.94145
+     }
+    },
+    {
+     "facility": "Collaborative Neuroscience Research, LLC",
+     "city": "Long Beach",
+     "state": "California",
+     "zip": "90806",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.76696,
+      "lon": -118.18923
+     }
+    },
+    {
+     "facility": "Long Beach Clinical Trials Services Inc.",
+     "city": "Long Beach",
+     "state": "California",
+     "zip": "90806",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.76696,
+      "lon": -118.18923
+     }
+    },
+    {
+     "facility": "Kaiser Permanente Los Angeles Medical Center",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90027",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "National Research Institute",
+     "city": "Los Angeles",
+     "state": "California",
+     "zip": "90057",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05223,
+      "lon": -118.24368
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, North Hollywood",
+     "city": "North Hollywood",
+     "state": "California",
+     "zip": "91606",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.17223,
+      "lon": -118.37897
+     }
+    },
+    {
+     "facility": "Paradigm Clinical Research Center",
+     "city": "Redding",
+     "state": "California",
+     "zip": "96001",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.58654,
+      "lon": -122.39168
+     }
+    },
+    {
+     "facility": "Kaiser Permanente Sacramento",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95815",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "Clinical and Translational Science Center (CTSC) Clinical Research Center (CCRC)",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95817",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "University of California Davis Health",
+     "city": "Sacramento",
+     "state": "California",
+     "zip": "95817",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.58157,
+      "lon": -121.4944
+     }
+    },
+    {
+     "facility": "California Research Foundation",
+     "city": "San Diego",
+     "state": "California",
+     "zip": "92123",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.71571,
+      "lon": -117.16472
+     }
+    },
+    {
+     "facility": "Kaiser Permanente Santa Clara",
+     "city": "Santa Clara",
+     "state": "California",
+     "zip": "95051",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.35411,
+      "lon": -121.95524
+     }
+    },
+    {
+     "facility": "Bayview Research Group",
+     "city": "Valley Village",
+     "state": "California",
+     "zip": "91607",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.16488,
+      "lon": -118.3965
+     }
+    },
+    {
+     "facility": "Diablo Clinical Research, Inc.",
+     "city": "Walnut Creek",
+     "state": "California",
+     "zip": "94598",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.90631,
+      "lon": -122.06496
+     }
+    },
+    {
+     "facility": "Lynn Institute of Denver",
+     "city": "Aurora",
+     "state": "Colorado",
+     "zip": "80012",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.72943,
+      "lon": -104.83192
+     }
+    },
+    {
+     "facility": "Clinical Research Consulting, LLC",
+     "city": "Milford",
+     "state": "Connecticut",
+     "zip": "06460",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.22232,
+      "lon": -73.0565
+     }
+    },
+    {
+     "facility": "Yale University",
+     "city": "New Haven",
+     "state": "Connecticut",
+     "zip": "06510",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.30815,
+      "lon": -72.92816
+     }
+    },
+    {
+     "facility": "Yale Center for Clinical Investigations (CSRU)",
+     "city": "New Haven",
+     "state": "Connecticut",
+     "zip": "06519",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.30815,
+      "lon": -72.92816
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research",
+     "city": "Coral Gables",
+     "state": "Florida",
+     "zip": "33134",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.72149,
+      "lon": -80.26838
+     }
+    },
+    {
+     "facility": "DeLand Clinical Research Unit",
+     "city": "DeLand",
+     "state": "Florida",
+     "zip": "32720",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.02832,
+      "lon": -81.30312
+     }
+    },
+    {
+     "facility": "Fleming Island Center for Clinical Research",
+     "city": "Fleming Island",
+     "state": "Florida",
+     "zip": "32003",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.0933,
+      "lon": -81.71898
+     }
+    },
+    {
+     "facility": "Indago Research & Health Center, Inc",
+     "city": "Hialeah",
+     "state": "Florida",
+     "zip": "33012",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.8576,
+      "lon": -80.27811
+     }
+    },
+    {
+     "facility": "Research Centers of America",
+     "city": "Hollywood",
+     "state": "Florida",
+     "zip": "33024",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 26.0112,
+      "lon": -80.14949
+     }
+    },
+    {
+     "facility": "Jacksonville Center for Clinical Research",
+     "city": "Jacksonville",
+     "state": "Florida",
+     "zip": "32216",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.33218,
+      "lon": -81.65565
+     }
+    },
+    {
+     "facility": "Clinical Neuroscience Solutions, Inc.",
+     "city": "Jacksonville",
+     "state": "Florida",
+     "zip": "32256",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.33218,
+      "lon": -81.65565
+     }
+    },
+    {
+     "facility": "Acevedo Clinical Research Associates",
+     "city": "Miami",
+     "state": "Florida",
+     "zip": "33142",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 25.77427,
+      "lon": -80.19366
+     }
+    },
+    {
+     "facility": "Clinical Neuroscience Solutions, Inc. dba CNS Healthcare",
+     "city": "Orlando",
+     "state": "Florida",
+     "zip": "32801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 28.53834,
+      "lon": -81.37924
+     }
+    },
+    {
+     "facility": "Atlanta Center for Medical Research",
+     "city": "Atlanta",
+     "state": "Georgia",
+     "zip": "30331",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.749,
+      "lon": -84.38798
+     }
+    },
+    {
+     "facility": "IACT Health",
+     "city": "Columbus",
+     "state": "Georgia",
+     "zip": "31904",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.46098,
+      "lon": -84.98771
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research",
+     "city": "Savannah",
+     "state": "Georgia",
+     "zip": "31406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.08354,
+      "lon": -81.09983
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Washington DC",
+     "city": "Savannah",
+     "state": "Georgia",
+     "zip": "31406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.08354,
+      "lon": -81.09983
+     }
+    },
+    {
+     "facility": "Clinical Research Atlanta",
+     "city": "Stockbridge",
+     "state": "Georgia",
+     "zip": "30281",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.54428,
+      "lon": -84.23381
+     }
+    },
+    {
+     "facility": "East-West Medical Research Institute",
+     "city": "Honolulu",
+     "state": "Hawaii",
+     "zip": "96814",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 21.30694,
+      "lon": -157.85833
+     }
+    },
+    {
+     "facility": "Solaris Clinical Research",
+     "city": "Meridian",
+     "state": "Idaho",
+     "zip": "83646",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.61211,
+      "lon": -116.39151
+     }
+    },
+    {
+     "facility": "Optimal Research",
+     "city": "Peoria",
+     "state": "Illinois",
+     "zip": "61614",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.69365,
+      "lon": -89.58899
+     }
+    },
+    {
+     "facility": "University of Iowa Hospitals & Clinics Investigational Drug Servces",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "42242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "University of Iowa Hospitals & Clinics",
+     "city": "Iowa City",
+     "state": "Iowa",
+     "zip": "52242",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66113,
+      "lon": -91.53017
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Norfolk",
+     "city": "Sioux City",
+     "state": "Iowa",
+     "zip": "51106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.49999,
+      "lon": -96.40031
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Newton",
+     "state": "Kansas",
+     "zip": "67114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.04668,
+      "lon": -97.34504
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Wichita",
+     "state": "Kansas",
+     "zip": "67207",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.69224,
+      "lon": -97.33754
+     }
+    },
+    {
+     "facility": "Kentucky Pediatric/ Adult Research",
+     "city": "Bardstown",
+     "state": "Kentucky",
+     "zip": "40004",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.80923,
+      "lon": -85.4669
+     }
+    },
+    {
+     "facility": "Benchmark Research",
+     "city": "Metairie",
+     "state": "Louisiana",
+     "zip": "70006",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.98409,
+      "lon": -90.15285
+     }
+    },
+    {
+     "facility": "Ochsner Clinic Foundation",
+     "city": "New Orleans",
+     "state": "Louisiana",
+     "zip": "70121",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.95465,
+      "lon": -90.07507
+     }
+    },
+    {
+     "facility": "LSU Health Sciences Center at Shreveport Clinical Trials Office",
+     "city": "Shreveport",
+     "state": "Louisiana",
+     "zip": "71101",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.52515,
+      "lon": -93.75018
+     }
+    },
+    {
+     "facility": "LSUHSC-Shreveport",
+     "city": "Shreveport",
+     "state": "Louisiana",
+     "zip": "71103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.52515,
+      "lon": -93.75018
+     }
+    },
+    {
+     "facility": "Pharmaron CPC, Inc.",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "University of Maryland Medical Center Investigational Drug Service Pharmacy",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "University of Maryland, Baltimore, Health Sciences Research Facility III",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "University of Maryland, Center for Vaccine Development and Global Health",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21201",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Johns Hopkins Bayview Medical Center",
+     "city": "Baltimore",
+     "state": "Maryland",
+     "zip": "21224",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.29038,
+      "lon": -76.61219
+     }
+    },
+    {
+     "facility": "Boston Medical Center",
+     "city": "Boston",
+     "state": "Massachusetts",
+     "zip": "02118",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.35843,
+      "lon": -71.05977
+     }
+    },
+    {
+     "facility": "UMass Memorial Medical Center - University Campus",
+     "city": "Worcester",
+     "state": "Massachusetts",
+     "zip": "01655",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.26259,
+      "lon": -71.80229
+     }
+    },
+    {
+     "facility": "Michigan Center for Medical Research",
+     "city": "Farmington Hills",
+     "state": "Michigan",
+     "zip": "48334",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.48531,
+      "lon": -83.37716
+     }
+    },
+    {
+     "facility": "MedPharmics, LLC",
+     "city": "Gulfport",
+     "state": "Mississippi",
+     "zip": "39503",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.36742,
+      "lon": -89.09282
+     }
+    },
+    {
+     "facility": "Clinical Research Professionals",
+     "city": "Chesterfield",
+     "state": "Missouri",
+     "zip": "63005",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.66311,
+      "lon": -90.57707
+     }
+    },
+    {
+     "facility": "Sundance Clinical Research, LLC",
+     "city": "St Louis",
+     "state": "Missouri",
+     "zip": "63141",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.62727,
+      "lon": -90.19789
+     }
+    },
+    {
+     "facility": "Bozeman Health Deaconess Hospital dba Bozeman Health Clinical Research",
+     "city": "Bozeman",
+     "state": "Montana",
+     "zip": "59715",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.67965,
+      "lon": -111.03856
+     }
+    },
+    {
+     "facility": "Bozeman Health Deaconess Hospital",
+     "city": "Bozeman",
+     "state": "Montana",
+     "zip": "59715",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.67965,
+      "lon": -111.03856
+     }
+    },
+    {
+     "facility": "Methodist Physicians Clinic / CCT Research",
+     "city": "Fremont",
+     "state": "Nebraska",
+     "zip": "68025",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.43333,
+      "lon": -96.49808
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Norfolk",
+     "city": "Norfolk",
+     "state": "Nebraska",
+     "zip": "68701",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.02834,
+      "lon": -97.417
+     }
+    },
+    {
+     "facility": "Quality Clinical Research, Inc.",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "zip": "68114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research, LLC",
+     "city": "Omaha",
+     "state": "Nebraska",
+     "zip": "68134",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.25626,
+      "lon": -95.94043
+     }
+    },
+    {
+     "facility": "Wake Research-Clinical Research Center of Nevada, LLC",
+     "city": "Las Vegas",
+     "state": "Nevada",
+     "zip": "89106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.17497,
+      "lon": -115.13722
+     }
+    },
+    {
+     "facility": "Amici Clinical Research",
+     "city": "Raritan",
+     "state": "New Jersey",
+     "zip": "08869",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.56955,
+      "lon": -74.63294
+     }
+    },
+    {
+     "facility": "South Jersey Infectious Disease",
+     "city": "Somers Point",
+     "state": "New Jersey",
+     "zip": "08244",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.31762,
+      "lon": -74.5946
+     }
+    },
+    {
+     "facility": "Gallup Indian Medical Center",
+     "city": "Gallup",
+     "state": "New Mexico",
+     "zip": "87301",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.52808,
+      "lon": -108.74258
+     }
+    },
+    {
+     "facility": "Johns Hopkins Center for American Indian Health",
+     "city": "Gallup",
+     "state": "New Mexico",
+     "zip": "87301",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.52808,
+      "lon": -108.74258
+     }
+    },
+    {
+     "facility": "Johns Hopkins Center for American Indian Health",
+     "city": "Shiprock",
+     "state": "New Mexico",
+     "zip": "87420",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.78555,
+      "lon": -108.68703
+     }
+    },
+    {
+     "facility": "Northern Navajo Medical Center",
+     "city": "Shiprock",
+     "state": "New Mexico",
+     "zip": "87420",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.78555,
+      "lon": -108.68703
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research, LLC",
+     "city": "Binghamton",
+     "state": "New York",
+     "zip": "13901",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.09869,
+      "lon": -75.91797
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research LLC",
+     "city": "Binghamton",
+     "state": "New York",
+     "zip": "13905",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.09869,
+      "lon": -75.91797
+     }
+    },
+    {
+     "facility": "NYU Langone Health",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10016",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Icahn School of Medicine at Mount Sinai - Investigational Drug Service",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10029",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Icahn School of Medicine at Mount Sinai",
+     "city": "New York",
+     "state": "New York",
+     "zip": "10029",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.71427,
+      "lon": -74.00597
+     }
+    },
+    {
+     "facility": "Rochester Clinical Research, Inc.",
+     "city": "Rochester",
+     "state": "New York",
+     "zip": "14609",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.15478,
+      "lon": -77.61556
+     }
+    },
+    {
+     "facility": "University of Rochester Medical Center- Kari Steinmetz",
+     "city": "Rochester",
+     "state": "New York",
+     "zip": "14642",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.15478,
+      "lon": -77.61556
+     }
+    },
+    {
+     "facility": "University of Rochester Medical Center",
+     "city": "Rochester",
+     "state": "New York",
+     "zip": "14642",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.15478,
+      "lon": -77.61556
+     }
+    },
+    {
+     "facility": "SUNY Upstate Medical University Global Health Research Unit",
+     "city": "Syracuse",
+     "state": "New York",
+     "zip": "13215",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 43.04812,
+      "lon": -76.14742
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research LLC",
+     "city": "Vestal",
+     "state": "New York",
+     "zip": "13850",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 42.08507,
+      "lon": -76.05381
+     }
+    },
+    {
+     "facility": "PMG Research of Raleigh, LLC d/b/a PMG Research of Cary",
+     "city": "Cary",
+     "state": "North Carolina",
+     "zip": "27518",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.79154,
+      "lon": -78.78112
+     }
+    },
+    {
+     "facility": "PMG Research of Charlotte LLC",
+     "city": "Charlotte",
+     "state": "North Carolina",
+     "zip": "28209",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22709,
+      "lon": -80.84313
+     }
+    },
+    {
+     "facility": "Duke University - Main Hospital and Clinics",
+     "city": "Durham",
+     "state": "North Carolina",
+     "zip": "27703",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.99403,
+      "lon": -78.89862
+     }
+    },
+    {
+     "facility": "PharmQuest",
+     "city": "Greensboro",
+     "state": "North Carolina",
+     "zip": "27408",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.07264,
+      "lon": -79.79198
+     }
+    },
+    {
+     "facility": "PMG Research of Hickory, LLC",
+     "city": "Hickory",
+     "state": "North Carolina",
+     "zip": "28601",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.73319,
+      "lon": -81.3412
+     }
+    },
+    {
+     "facility": "PMG Research of Raleigh, LLC",
+     "city": "Raleigh",
+     "state": "North Carolina",
+     "zip": "27609",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.7721,
+      "lon": -78.63861
+     }
+    },
+    {
+     "facility": "M3 Wake Research, Inc.",
+     "city": "Raleigh",
+     "state": "North Carolina",
+     "zip": "27612",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.7721,
+      "lon": -78.63861
+     }
+    },
+    {
+     "facility": "PMG Research of Salisbury, LLC",
+     "city": "Salisbury",
+     "state": "North Carolina",
+     "zip": "28144",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.67097,
+      "lon": -80.47423
+     }
+    },
+    {
+     "facility": "PMG Research of Wilmington, LLC",
+     "city": "Wilmington",
+     "state": "North Carolina",
+     "zip": "28401",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.23556,
+      "lon": -77.94604
+     }
+    },
+    {
+     "facility": "PMG Research of Winston-Salem, LLC",
+     "city": "Winston-Salem",
+     "state": "North Carolina",
+     "zip": "27103",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.09986,
+      "lon": -80.24422
+     }
+    },
+    {
+     "facility": "Lillestol Research Llc",
+     "city": "Fargo",
+     "state": "North Dakota",
+     "zip": "58104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 46.87719,
+      "lon": -96.7898
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research, LLC",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45219",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Cincinnati Children's Hospital Medical Center",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "Meridian Clinical Research LLC",
+     "city": "Cincinnati",
+     "state": "Ohio",
+     "zip": "45246",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.12711,
+      "lon": -84.51439
+     }
+    },
+    {
+     "facility": "University Hospitals Cleveland Medical Center",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "VA Northeast Ohio Healthcare System",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44106",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Inc.",
+     "city": "Cleveland",
+     "state": "Ohio",
+     "zip": "44122",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.4995,
+      "lon": -81.69541
+     }
+    },
+    {
+     "facility": "Aventiv Research Inc.",
+     "city": "Columbus",
+     "state": "Ohio",
+     "zip": "43213",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.96118,
+      "lon": -82.99879
+     }
+    },
+    {
+     "facility": "Dayton Clinical Research",
+     "city": "Dayton",
+     "state": "Ohio",
+     "zip": "45406",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.75895,
+      "lon": -84.19161
+     }
+    },
+    {
+     "facility": "Dayton Clinical Research",
+     "city": "Dayton",
+     "state": "Ohio",
+     "zip": "45409",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.75895,
+      "lon": -84.19161
+     }
+    },
+    {
+     "facility": "PriMED Clinical Research",
+     "city": "Dayton",
+     "state": "Ohio",
+     "zip": "45429",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 39.75895,
+      "lon": -84.19161
+     }
+    },
+    {
+     "facility": "Senders Pediatrics",
+     "city": "South Euclid",
+     "state": "Ohio",
+     "zip": "44121",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.52311,
+      "lon": -81.51846
+     }
+    },
+    {
+     "facility": "Lynn Institute of Norman",
+     "city": "Norman",
+     "state": "Oklahoma",
+     "zip": "73072",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.22257,
+      "lon": -97.43948
+     }
+    },
+    {
+     "facility": "Kaiser Permanente Northwest-Center for Health Research",
+     "city": "Portland",
+     "state": "Oregon",
+     "zip": "97227",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 45.52345,
+      "lon": -122.67621
+     }
+    },
+    {
+     "facility": "Lehigh Valley Health Network/Network Office of Research and Innovation",
+     "city": "Allentown",
+     "state": "Pennsylvania",
+     "zip": "18102",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.60843,
+      "lon": -75.49018
+     }
+    },
+    {
+     "facility": "Velocity Clinical Research, Providence",
+     "city": "East Greenwich",
+     "state": "Rhode Island",
+     "zip": "02818",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 41.66038,
+      "lon": -71.45589
+     }
+    },
+    {
+     "facility": "Main Street Physician's Care",
+     "city": "Little River",
+     "state": "South Carolina",
+     "zip": "29566",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 33.87323,
+      "lon": -78.61418
+     }
+    },
+    {
+     "facility": "Main Street Physician's Care",
+     "city": "Loris",
+     "state": "South Carolina",
+     "zip": "29569",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 34.05628,
+      "lon": -78.8903
+     }
+    },
+    {
+     "facility": "Holston Medical Group-Clinical Research",
+     "city": "Bristol",
+     "state": "Tennessee",
+     "zip": "37620",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.59511,
+      "lon": -82.18874
+     }
+    },
+    {
+     "facility": "Holston Medical Group",
+     "city": "Kingsport",
+     "state": "Tennessee",
+     "zip": "37660",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.54843,
+      "lon": -82.56182
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Knoxville",
+     "state": "Tennessee",
+     "zip": "37909",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.96064,
+      "lon": -83.92074
+     }
+    },
+    {
+     "facility": "Alliance for Multispecialty Research, LLC",
+     "city": "Knoxville",
+     "state": "Tennessee",
+     "zip": "37920",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.96064,
+      "lon": -83.92074
+     }
+    },
+    {
+     "facility": "Clinical Neuroscience Solutions, Inc.",
+     "city": "Memphis",
+     "state": "Tennessee",
+     "zip": "38119",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.14953,
+      "lon": -90.04898
+     }
+    },
+    {
+     "facility": "Clinical Research Associates, Inc.",
+     "city": "Nashville",
+     "state": "Tennessee",
+     "zip": "37203",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 36.16589,
+      "lon": -86.78444
+     }
+    },
+    {
+     "facility": "Trinity Clinical Research",
+     "city": "Tullahoma",
+     "state": "Tennessee",
+     "zip": "37388",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 35.36202,
+      "lon": -86.20943
+     }
+    },
+    {
+     "facility": "Benchmark Research",
+     "city": "Austin",
+     "state": "Texas",
+     "zip": "78705",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.26715,
+      "lon": -97.74306
+     }
+    },
+    {
+     "facility": "Innovo Research - Austin Regional Clinic",
+     "city": "Austin",
+     "state": "Texas",
+     "zip": "78726",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.26715,
+      "lon": -97.74306
+     }
+    },
+    {
+     "facility": "Tekton Research, Inc.",
+     "city": "Austin",
+     "state": "Texas",
+     "zip": "78745",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.26715,
+      "lon": -97.74306
+     }
+    },
+    {
+     "facility": "North Texas Infectious Diseases Consultants, P.A.",
+     "city": "Dallas",
+     "state": "Texas",
+     "zip": "75246",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.78306,
+      "lon": -96.80667
+     }
+    },
+    {
+     "facility": "Ventavia Research Group, LLC",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76104",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Benchmark Research",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76135",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "Texas Health Resources",
+     "city": "Fort Worth",
+     "state": "Texas",
+     "zip": "76135",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.72541,
+      "lon": -97.32085
+     }
+    },
+    {
+     "facility": "University of Texas Medical Branch",
+     "city": "Galveston",
+     "state": "Texas",
+     "zip": "77555",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.30135,
+      "lon": -94.7977
+     }
+    },
+    {
+     "facility": "Hany H. Ahmed, MD",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77008",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Ventavia Research Group, LLC",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77008",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Texas Center for Drug Development, Inc.",
+     "city": "Houston",
+     "state": "Texas",
+     "zip": "77081",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.76328,
+      "lon": -95.36327
+     }
+    },
+    {
+     "facility": "Ventavia Research Group, LLC",
+     "city": "Keller",
+     "state": "Texas",
+     "zip": "76248",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.93457,
+      "lon": -97.25168
+     }
+    },
+    {
+     "facility": "SMS Clinical Research, LLC",
+     "city": "Mesquite",
+     "state": "Texas",
+     "zip": "75149",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 32.7668,
+      "lon": -96.59916
+     }
+    },
+    {
+     "facility": "LinQ Research, LLC",
+     "city": "Pearland",
+     "state": "Texas",
+     "zip": "77584",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.56357,
+      "lon": -95.28605
+     }
+    },
+    {
+     "facility": "Benchmark Research.",
+     "city": "San Angelo",
+     "state": "Texas",
+     "zip": "76904",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 31.46377,
+      "lon": -100.43704
+     }
+    },
+    {
+     "facility": "Clinical Trials of Texas, Inc.",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Diagnostics Research Group",
+     "city": "San Antonio",
+     "state": "Texas",
+     "zip": "78229",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 29.42412,
+      "lon": -98.49363
+     }
+    },
+    {
+     "facility": "Martin Diagnostic Clinic",
+     "city": "Tomball",
+     "state": "Texas",
+     "zip": "77375",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 30.09716,
+      "lon": -95.61605
+     }
+    },
+    {
+     "facility": "J. Lewis Research, Inc. / Foothill Family Clinic",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84109",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "J. Lewis Research, Inc. / Foothill Family Clinic South",
+     "city": "Salt Lake City",
+     "state": "Utah",
+     "zip": "84121",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 40.76078,
+      "lon": -111.89105
+     }
+    },
+    {
+     "facility": "Clinical Alliance for Research & Education - Infectious Diseases, LLC (CARE-ID)",
+     "city": "Annandale",
+     "state": "Virginia",
+     "zip": "22003",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.83039,
+      "lon": -77.19637
+     }
+    },
+    {
+     "facility": "Infectious Diseases Physicians, LLC",
+     "city": "Annandale",
+     "state": "Virginia",
+     "zip": "22003",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 38.83039,
+      "lon": -77.19637
+     }
+    },
+    {
+     "facility": "Virginia Research Center LLC",
+     "city": "Midlothian",
+     "state": "Virginia",
+     "zip": "23114",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 37.50598,
+      "lon": -77.64916
+     }
+    },
+    {
+     "facility": "Benaroya Research Institute at Virginia Mason",
+     "city": "Seattle",
+     "state": "Washington",
+     "zip": "98101",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.60621,
+      "lon": -122.33207
+     }
+    },
+    {
+     "facility": "Wenatchee Valley Hospital",
+     "city": "Wenatchee",
+     "state": "Washington",
+     "zip": "98801",
+     "country": "United States",
+     "geoPoint": {
+      "lat": 47.42346,
+      "lon": -120.31035
+     }
+    },
+    {
+     "facility": "Hospital Militar Central Cirujano Mayor Dr. Cosme Argerich",
+     "city": "CABA",
+     "zip": "1426",
+     "country": "Argentina"
+    },
+    {
+     "facility": "Hospital Santo Antonio/ Associacao Obras Sociais Irma Dulce",
+     "city": "Salvador",
+     "state": "Estado de Bahia",
+     "zip": "CEP: 40415-006",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -12.97563,
+      "lon": -38.49096
+     }
+    },
+    {
+     "facility": "CEPIC - Centro Paulista de Investigacao Clinica e Servicos Medicos Ltda (Casa Branca)",
+     "city": "S\u00e3o Paulo",
+     "zip": "04266-010",
+     "country": "Brazil",
+     "geoPoint": {
+      "lat": -23.5475,
+      "lon": -46.63611
+     }
+    },
+    {
+     "facility": "CRS Clinical Research Services Berlin GmbH",
+     "city": "Berlin",
+     "zip": "13353",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 52.52437,
+      "lon": 13.41053
+     }
+    },
+    {
+     "facility": "Medizentrum Essen Borbeck",
+     "city": "Essen",
+     "zip": "45355",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 51.45657,
+      "lon": 7.01228
+     }
+    },
+    {
+     "facility": "IKF Pneumologie GmbH & Co KG",
+     "city": "Frankfurt am Main",
+     "zip": "60596",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 50.11552,
+      "lon": 8.68417
+     }
+    },
+    {
+     "facility": "Universit\u00e4tsklinikum Hamburg-Eppendorf",
+     "city": "Hamburg",
+     "zip": "20359",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.55073,
+      "lon": 9.99302
+     }
+    },
+    {
+     "facility": "CRS Clinical Research Services Mannheim GmbH",
+     "city": "Mannheim",
+     "zip": "68167",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 49.4891,
+      "lon": 8.46694
+     }
+    },
+    {
+     "facility": "Studienzentrum Brinkum Dr. Lars Pohlmeier und Torsten Drescher",
+     "city": "Stuhr",
+     "zip": "28816",
+     "country": "Germany",
+     "geoPoint": {
+      "lat": 53.03333,
+      "lon": 8.75
+     }
+    },
+    {
+     "facility": "Newtown Clinical Research Centre",
+     "city": "Johannesburg",
+     "state": "Gauteng",
+     "zip": "2113",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -26.20227,
+      "lon": 28.04363
+     }
+    },
+    {
+     "facility": "Jongaie Research",
+     "city": "Pretoria",
+     "state": "Gauteng",
+     "zip": "0183",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -25.74486,
+      "lon": 28.18783
+     }
+    },
+    {
+     "facility": "Limpopo Clinical Research Initiative",
+     "city": "Thabazimbi",
+     "state": "Limpopo",
+     "zip": "0380",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -24.59165,
+      "lon": 27.41155
+     }
+    },
+    {
+     "facility": "Tiervlei Trial Centre, Basement Level, Karl Bremer Hospital",
+     "city": "Cape Town",
+     "state": "Western Cape",
+     "zip": "7530",
+     "country": "South Africa",
+     "geoPoint": {
+      "lat": -33.92584,
+      "lon": 18.42322
+     }
+    },
+    {
+     "facility": "Hacettepe Universitesi Tip Fakultesi",
+     "city": "Ankara",
+     "zip": "06230",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 39.91987,
+      "lon": 32.85427
+     }
+    },
+    {
+     "facility": "Istanbul Yedikule Gogus Hastaliklari ve Gogus Cerrahisi Egitim Arastirma Hastanesi",
+     "city": "Istanbul",
+     "zip": "34020",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Istanbul Universitesi Istanbul Tip Fakultesi",
+     "city": "Istanbul",
+     "zip": "34093",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Istanbul Universitesi-Cerrahpasa, Cerrahpasa Tip Fakultesi",
+     "city": "Istanbul",
+     "zip": "34098",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Medipol Mega Universite Hastanesi",
+     "city": "Istanbul",
+     "zip": "34214",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Acibadem Atakent Hastanesi",
+     "city": "Istanbul",
+     "zip": "34303",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 41.01384,
+      "lon": 28.94966
+     }
+    },
+    {
+     "facility": "Kocaeli Universitesi Tip Fakultesi",
+     "city": "Kocaeli",
+     "zip": "41380",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 39.62497,
+      "lon": 27.51145
+     }
+    },
+    {
+     "facility": "Sakarya Universitesi Egitim ve Arastirma Hastanesi",
+     "city": "Sakarya",
+     "zip": "54100",
+     "country": "Turkey (T\u00fcrkiye)",
+     "geoPoint": {
+      "lat": 39.50333,
+      "lon": 32.07583
+     }
+    }
+   ]
+  },
+  "referencesModule": {
+   "references": [
+    {
+     "pmid": "40396505",
+     "type": "DERIVED",
+     "citation": "Zorger AM, Hirsch C, Baumann M, Feldmann M, Brockelmann PJ, Mellinghoff S, Monsef I, Skoetz N, Kreuzberger N. Vaccines for preventing infections in adults with haematological malignancies. Cochrane Database Syst Rev. 2025 May 21;5(5):CD015530. doi: 10.1002/14651858.CD015530.pub2."
+    },
+    {
+     "pmid": "40237463",
+     "type": "DERIVED",
+     "citation": "Hirsch C, Zorger AM, Baumann M, Park YS, Brockelmann PJ, Mellinghoff S, Monsef I, Skoetz N, Kreuzberger N. Vaccines for preventing infections in adults with solid tumours. Cochrane Database Syst Rev. 2025 Apr 16;4(4):CD015551. doi: 10.1002/14651858.CD015551.pub2."
+    },
+    {
+     "pmid": "39197299",
+     "type": "DERIVED",
+     "citation": "Pather S, Charpentier N, van den Ouweland F, Rizzi R, Finlayson A, Salisch N, Muik A, Lindemann C, Khanim R, Abduljawad S, Smith ER, Gurwith M, Chen RT; Benefit-Risk Assessment of VAccines by TechnolOgy Working Group (BRAVATO; ex-V3SWG). A Brighton Collaboration standardized template with key considerations for a benefit-risk assessment for the Comirnaty COVID-19 mRNA vaccine. Vaccine. 2024 Sep 17;42(22):126165. doi: 10.1016/j.vaccine.2024.126165. Epub 2024 Aug 27."
+    },
+    {
+     "pmid": "38012751",
+     "type": "DERIVED",
+     "citation": "Killeen T, Kermer V, Troxler Saxer R. mRNA vaccine development during the COVID-19 pandemic: a retrospective review from the perspective of the Swiss affiliate of a global biopharmaceutical company. J Pharm Policy Pract. 2023 Nov 27;16(1):158. doi: 10.1186/s40545-023-00652-y."
+    },
+    {
+     "pmid": "36055877",
+     "type": "DERIVED",
+     "citation": "Fraiman J, Erviti J, Jones M, Greenland S, Whelan P, Kaplan RM, Doshi P. Serious adverse events of special interest following mRNA COVID-19 vaccination in randomized trials in adults. Vaccine. 2022 Sep 22;40(40):5798-5805. doi: 10.1016/j.vaccine.2022.08.036. Epub 2022 Aug 31."
+    },
+    {
+     "pmid": "35792746",
+     "type": "DERIVED",
+     "citation": "Kurhade C, Zou J, Xia H, Liu M, Yang Q, Cutler M, Cooper D, Muik A, Sahin U, Jansen KU, Ren P, Xie X, Swanson KA, Shi PY. Neutralization of Omicron sublineages and Deltacron SARS-CoV-2 by three doses of BNT162b2 vaccine or BA.1 infection. Emerg Microbes Infect. 2022 Dec;11(1):1828-1832. doi: 10.1080/22221751.2022.2099305."
+    },
+    {
+     "pmid": "35739094",
+     "type": "DERIVED",
+     "citation": "Kurhade C, Zou J, Xia H, Cai H, Yang Q, Cutler M, Cooper D, Muik A, Jansen KU, Xie X, Swanson KA, Shi PY. Neutralization of Omicron BA.1, BA.2, and BA.3 SARS-CoV-2 by 3 doses of BNT162b2 vaccine. Nat Commun. 2022 Jun 23;13(1):3602. doi: 10.1038/s41467-022-30681-1."
+    },
+    {
+     "pmid": "35472295",
+     "type": "DERIVED",
+     "citation": "De Santis F, Gubbiotti S. Borrowing historical information for non-inferiority trials on Covid-19 vaccines. Int J Biostat. 2022 Apr 27;19(1):177-189. doi: 10.1515/ijb-2021-0120. eCollection 2023 May 1."
+    },
+    {
+     "pmid": "35131133",
+     "type": "DERIVED",
+     "citation": "Thomas SJ, Perez JL, Lockhart SP, Hariharan S, Kitchin N, Bailey R, Liau K, Lagkadinou E, Tureci O, Sahin U, Xu X, Koury K, Dychter SS, Lu C, Gentile TC, Gruber WC. Efficacy and safety of the BNT162b2 mRNA COVID-19 vaccine in participants with a history of cancer: subgroup analysis of a global phase 3 randomized clinical trial. Vaccine. 2022 Mar 1;40(10):1483-1492. doi: 10.1016/j.vaccine.2021.12.046. Epub 2021 Dec 24."
+    },
+    {
+     "pmid": "34525277",
+     "type": "DERIVED",
+     "citation": "Thomas SJ, Moreira ED Jr, Kitchin N, Absalon J, Gurtman A, Lockhart S, Perez JL, Perez Marc G, Polack FP, Zerbini C, Bailey R, Swanson KA, Xu X, Roychoudhury S, Koury K, Bouguermouh S, Kalina WV, Cooper D, Frenck RW Jr, Hammitt LL, Tureci O, Nell H, Schaefer A, Unal S, Yang Q, Liberator P, Tresnan DB, Mather S, Dormitzer PR, Sahin U, Gruber WC, Jansen KU; C4591001 Clinical Trial Group. Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine through 6 Months. N Engl J Med. 2021 Nov 4;385(19):1761-1773. doi: 10.1056/NEJMoa2110345. Epub 2021 Sep 15."
+    },
+    {
+     "pmid": "34043894",
+     "type": "DERIVED",
+     "citation": "Frenck RW Jr, Klein NP, Kitchin N, Gurtman A, Absalon J, Lockhart S, Perez JL, Walter EB, Senders S, Bailey R, Swanson KA, Ma H, Xu X, Koury K, Kalina WV, Cooper D, Jennings T, Brandon DM, Thomas SJ, Tureci O, Tresnan DB, Mather S, Dormitzer PR, Sahin U, Jansen KU, Gruber WC; C4591001 Clinical Trial Group. Safety, Immunogenicity, and Efficacy of the BNT162b2 Covid-19 Vaccine in Adolescents. N Engl J Med. 2021 Jul 15;385(3):239-250. doi: 10.1056/NEJMoa2107456. Epub 2021 May 27."
+    },
+    {
+     "pmid": "33524990",
+     "type": "DERIVED",
+     "citation": "Vogel AB, Kanevsky I, Che Y, Swanson KA, Muik A, Vormehr M, Kranz LM, Walzer KC, Hein S, Guler A, Loschko J, Maddur MS, Ota-Setlik A, Tompkins K, Cole J, Lui BG, Ziegenhals T, Plaschke A, Eisel D, Dany SC, Fesser S, Erbar S, Bates F, Schneider D, Jesionek B, Sanger B, Wallisch AK, Feuchter Y, Junginger H, Krumm SA, Heinen AP, Adams-Quack P, Schlereth J, Schille S, Kroner C, de la Caridad Guimil Garcia R, Hiller T, Fischer L, Sellers RS, Choudhary S, Gonzalez O, Vascotto F, Gutman MR, Fontenot JA, Hall-Ursone S, Brasky K, Griffor MC, Han S, Su AAH, Lees JA, Nedoma NL, Mashalidis EH, Sahasrabudhe PV, Tan CY, Pavliakova D, Singh G, Fontes-Garfias C, Pride M, Scully IL, Ciolino T, Obregon J, Gazi M, Carrion R Jr, Alfson KJ, Kalina WV, Kaushal D, Shi PY, Klamp T, Rosenbaum C, Kuhn AN, Tureci O, Dormitzer PR, Jansen KU, Sahin U. BNT162b vaccines protect rhesus macaques from SARS-CoV-2. Nature. 2021 Apr;592(7853):283-289. doi: 10.1038/s41586-021-03275-y. Epub 2021 Feb 1."
+    },
+    {
+     "pmid": "33301246",
+     "type": "DERIVED",
+     "citation": "Polack FP, Thomas SJ, Kitchin N, Absalon J, Gurtman A, Lockhart S, Perez JL, Perez Marc G, Moreira ED, Zerbini C, Bailey R, Swanson KA, Roychoudhury S, Koury K, Li P, Kalina WV, Cooper D, Frenck RW Jr, Hammitt LL, Tureci O, Nell H, Schaefer A, Unal S, Tresnan DB, Mather S, Dormitzer PR, Sahin U, Jansen KU, Gruber WC; C4591001 Clinical Trial Group. Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine. N Engl J Med. 2020 Dec 31;383(27):2603-2615. doi: 10.1056/NEJMoa2034577. Epub 2020 Dec 10."
+    },
+    {
+     "pmid": "33053279",
+     "type": "DERIVED",
+     "citation": "Walsh EE, Frenck RW Jr, Falsey AR, Kitchin N, Absalon J, Gurtman A, Lockhart S, Neuzil K, Mulligan MJ, Bailey R, Swanson KA, Li P, Koury K, Kalina W, Cooper D, Fontes-Garfias C, Shi PY, Tureci O, Tompkins KR, Lyke KE, Raabe V, Dormitzer PR, Jansen KU, Sahin U, Gruber WC. Safety and Immunogenicity of Two RNA-Based Covid-19 Vaccine Candidates. N Engl J Med. 2020 Dec 17;383(25):2439-2450. doi: 10.1056/NEJMoa2027906. Epub 2020 Oct 14."
+    },
+    {
+     "pmid": "32785213",
+     "type": "DERIVED",
+     "citation": "Mulligan MJ, Lyke KE, Kitchin N, Absalon J, Gurtman A, Lockhart S, Neuzil K, Raabe V, Bailey R, Swanson KA, Li P, Koury K, Kalina W, Cooper D, Fontes-Garfias C, Shi PY, Tureci O, Tompkins KR, Walsh EE, Frenck R, Falsey AR, Dormitzer PR, Gruber WC, Sahin U, Jansen KU. Phase I/II study of COVID-19 RNA vaccine BNT162b1 in adults. Nature. 2020 Oct;586(7830):589-593. doi: 10.1038/s41586-020-2639-4. Epub 2020 Aug 12."
+    }
+   ],
+   "seeAlsoLinks": [
+    {
+     "label": "To obtain contact information for a study center near you, click here.",
+     "url": "https://pmiform.com/clinical-trial-info-request?StudyID=C4591001"
+    }
+   ]
+  },
+  "ipdSharingStatementModule": {
+   "ipdSharing": "NO"
+  }
+ },
+ "documentSection": {
+  "largeDocumentModule": {
+   "largeDocs": [
+    {
+     "typeAbbrev": "Prot",
+     "hasProtocol": true,
+     "hasSap": false,
+     "hasIcf": false,
+     "label": "Study Protocol",
+     "date": "2022-09-15",
+     "uploadDate": "2024-02-07T08:27",
+     "filename": "Prot_000.pdf",
+     "size": 4368112
+    },
+    {
+     "typeAbbrev": "SAP",
+     "hasProtocol": false,
+     "hasSap": true,
+     "hasIcf": false,
+     "label": "Statistical Analysis Plan",
+     "date": "2022-10-07",
+     "uploadDate": "2024-02-07T11:13",
+     "filename": "SAP_001.pdf",
+     "size": 3902442
+    }
+   ]
+  }
+ },
+ "derivedSection": {
+  "miscInfoModule": {
+   "versionHolder": "2026-08-21",
+   "submissionTracking": {
+    "firstMcpInfo": {
+     "postDateStruct": {
+      "date": "2024-03-07",
+      "type": "ACTUAL"
+     }
+    }
+   }
+  },
+  "conditionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000086382",
+     "term": "COVID-19"
+    },
+    {
+     "id": "D018352",
+     "term": "Coronavirus Infections"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D011024",
+     "term": "Pneumonia, Viral"
+    },
+    {
+     "id": "D011014",
+     "term": "Pneumonia"
+    },
+    {
+     "id": "D012141",
+     "term": "Respiratory Tract Infections"
+    },
+    {
+     "id": "D007239",
+     "term": "Infections"
+    },
+    {
+     "id": "D014777",
+     "term": "Virus Diseases"
+    },
+    {
+     "id": "D003333",
+     "term": "Coronaviridae Infections"
+    },
+    {
+     "id": "D030341",
+     "term": "Nidovirales Infections"
+    },
+    {
+     "id": "D012327",
+     "term": "RNA Virus Infections"
+    },
+    {
+     "id": "D008171",
+     "term": "Lung Diseases"
+    },
+    {
+     "id": "D012140",
+     "term": "Respiratory Tract Diseases"
+    }
+   ]
+  },
+  "interventionBrowseModule": {
+   "meshes": [
+    {
+     "id": "D000090982",
+     "term": "BNT162 Vaccine"
+    }
+   ],
+   "ancestors": [
+    {
+     "id": "D000087503",
+     "term": "mRNA Vaccines"
+    },
+    {
+     "id": "D000087504",
+     "term": "Nucleic Acid-Based Vaccines"
+    },
+    {
+     "id": "D014614",
+     "term": "Vaccines, Synthetic"
+    },
+    {
+     "id": "D011994",
+     "term": "Recombinant Proteins"
+    },
+    {
+     "id": "D011506",
+     "term": "Proteins"
+    },
+    {
+     "id": "D000602",
+     "term": "Amino Acids, Peptides, and Proteins"
+    },
+    {
+     "id": "D014612",
+     "term": "Vaccines"
+    },
+    {
+     "id": "D001688",
+     "term": "Biological Products"
+    },
+    {
+     "id": "D045424",
+     "term": "Complex Mixtures"
+    },
+    {
+     "id": "D000086663",
+     "term": "COVID-19 Vaccines"
+    },
+    {
+     "id": "D014765",
+     "term": "Viral Vaccines"
+    },
+    {
+     "id": "D000941",
+     "term": "Antigens"
+    },
+    {
+     "id": "D001685",
+     "term": "Biological Factors"
+    }
+   ]
+  }
+ },
+ "hasResults": true
+}
