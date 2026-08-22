@@ -48,3 +48,21 @@ class TokenBucket:
                 deficit = tokens - self._tokens
                 wait_for = deficit / self._rate
             await asyncio.sleep(wait_for)
+
+    async def try_acquire(self, tokens: float = 1.0) -> bool:
+        """Non-blocking variant: take the tokens if available, else refuse.
+
+        ``acquire`` is right for a worker pacing itself against an upstream
+        API's ceiling -- waiting is the correct behaviour there. It is wrong
+        for a live HTTP request: a caller over a public endpoint's rate limit
+        should get an immediate 429, not sit blocked for however long the
+        bucket takes to refill.
+        """
+        async with self._lock:
+            now = time.monotonic()
+            self._tokens = min(self._capacity, self._tokens + (now - self._updated) * self._rate)
+            self._updated = now
+            if self._tokens >= tokens:
+                self._tokens -= tokens
+                return True
+            return False

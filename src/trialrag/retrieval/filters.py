@@ -183,3 +183,6 @@ class QueryParser:
             raise QueryParseError("response carried no parsed_output")
 
         return ParsedQuery(filters=parsed.filters.normalised(), search_query=parsed.search_query)
+
+    async def aclose(self) -> None:
+        await self.client.close()

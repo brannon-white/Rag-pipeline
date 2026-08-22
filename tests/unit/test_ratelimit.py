@@ -51,6 +51,21 @@ def test_rejects_nonsense_rate() -> None:
         TokenBucket(0)
 
 
+async def test_try_acquire_succeeds_within_capacity() -> None:
+    bucket = TokenBucket(60, capacity=2)
+    assert await bucket.try_acquire() is True
+    assert await bucket.try_acquire() is True
+
+
+async def test_try_acquire_fails_without_blocking_when_exhausted() -> None:
+    bucket = TokenBucket(60, capacity=1)
+    assert await bucket.try_acquire() is True
+    loop = asyncio.get_running_loop()
+    start = loop.time()
+    assert await bucket.try_acquire() is False
+    assert loop.time() - start < 0.05
+
+
 async def test_wait_scales_with_how_far_under_capacity_a_low_rate_sits() -> None:
     """Regression guard: the prod incident was Voyage's 3 req/min ceiling --
     a rate far too low for reactive retry-on-429 to survive. Uses a scaled-up

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrialRAG</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #6b6b6b; --border: #dcdcdc;
+    --accent: #2a52a0; --accent-bg: #eef2fb; --danger: #a02a2a; --danger-bg: #fbeeee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16181c; --fg: #e8e8e8; --muted: #9a9a9a; --border: #34383f;
+             --accent: #7fa4e0; --accent-bg: #1e2734; --danger: #e08787; --danger-bg: #2e1f1f; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.1rem; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .disclaimer {
+    font-size: 0.8rem; color: var(--muted); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.6rem 0.8rem; margin-bottom: 1.25rem;
+  }
+  form { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+  input[type="text"] {
+    flex: 1; padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg); color: var(--fg); font-size: 1rem;
+  }
+  button {
+    padding: 0.6rem 1.1rem; border-radius: 8px; border: 1px solid var(--accent);
+    background: var(--accent); color: white; font-size: 0.95rem; cursor: pointer;
+  }
+  button:disabled { opacity: 0.5; cursor: default; }
+  button.secondary { background: transparent; color: var(--accent); }
+  label.toggle { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--muted); margin-bottom: 1.25rem; }
+  #answer {
+    white-space: pre-wrap; padding: 1rem; border: 1px solid var(--border);
+    border-radius: 10px; min-height: 3rem; margin-bottom: 0.75rem;
+  }
+  #answer:empty::before { content: "Ask a question about a clinical trial protocol."; color: var(--muted); }
+  sup.citation {
+    cursor: pointer; color: var(--accent); background: var(--accent-bg);
+    border-radius: 4px; padding: 0 0.3em; margin: 0 0.05em; font-weight: 600;
+  }
+  .citation-card {
+    border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 0.6rem 0.8rem; margin: 0.4rem 0; font-size: 0.88rem;
+  }
+  .citation-card a { color: var(--accent); }
+  .rejection { border: 1px solid var(--danger); background: var(--danger-bg); color: var(--danger);
+               border-radius: 8px; padding: 0.7rem 0.9rem; margin-bottom: 0.75rem; }
+  .feedback { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; }
+  .feedback button { padding: 0.3rem 0.7rem; font-size: 1rem; }
+  #debug table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-top: 0.5rem; }
+  #debug th, #debug td { border-bottom: 1px solid var(--border); padding: 0.35rem 0.5rem; text-align: left; }
+  #debug th { color: var(--muted); font-weight: 600; }
+  #debug .content-preview { color: var(--muted); max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TrialRAG</h1>
+  <p class="subtitle">Ask about clinical trial protocols in the corpus — eligibility, phases, sponsors, outcomes.</p>
+  <div class="disclaimer">This tool describes what trial protocols say. It does not give individualized medical advice — consult a healthcare professional about your own situation.</div>
+
+  <form id="query-form">
+    <input type="text" id="query-input" placeholder="e.g. Which Phase 3 trials study type 2 diabetes?" autocomplete="off">
+    <button type="submit" id="ask-button">Ask</button>
+  </form>
+  <label class="toggle"><input type="checkbox" id="debug-toggle"> Show retrieval debug (dense/sparse/RRF/rerank scores)</label>
+
+  <div id="rejection" class="rejection hidden"></div>
+  <div id="answer"></div>
+  <div id="feedback" class="feedback hidden">
+    <span style="color: var(--muted); font-size: 0.85rem;">Was this helpful?</span>
+    <button class="secondary" id="thumbs-up">👍</button>
+    <button class="secondary" id="thumbs-down">👎</button>
+  </div>
+  <div id="sources"></div>
+  <div id="debug" class="hidden"></div>
+</main>
+
+<script>
+const form = document.getElementById("query-form");
+const input = document.getElementById("query-input");
+const askButton = document.getElementById("ask-button");
+const answerEl = document.getElementById("answer");
+const sourcesEl = document.getElementById("sources");
+const rejectionEl = document.getElementById("rejection");
+const feedbackEl = document.getElementById("feedback");
+const debugToggle = document.getElementById("debug-toggle");
+const debugEl = document.getElementById("debug");
+
+let citationCount = 0;
+let currentQueryLogId = null;
+
+function resetOutputs() {
+  answerEl.textContent = "";
+  sourcesEl.innerHTML = "";
+  debugEl.innerHTML = "";
+  debugEl.classList.add("hidden");
+  rejectionEl.classList.add("hidden");
+  feedbackEl.classList.add("hidden");
+  citationCount = 0;
+  currentQueryLogId = null;
+}
+
+function showRejection(payload) {
+  rejectionEl.textContent = payload.retry_search
+    ? `${payload.detail} (retrieval search is still available)`
+    : payload.detail;
+  rejectionEl.classList.remove("hidden");
+}
+
+function appendText(text) {
+  answerEl.appendChild(document.createTextNode(text));
+}
+
+function appendCitation(citation) {
+  citationCount += 1;
+  const marker = document.createElement("sup");
+  marker.className = "citation";
+  marker.textContent = String(citationCount);
+  marker.title = "Click to view source";
+  answerEl.appendChild(marker);
+
+  const card = document.createElement("div");
+  card.className = "citation-card";
+  card.id = `citation-${citationCount}`;
+  card.innerHTML = `<strong>[${citationCount}]</strong> "${citation.cited_text}" — ` +
+    `<a href="${citation.source_url}" target="_blank" rel="noopener">${citation.nct_id}</a>`;
+  card.style.display = "none";
+  sourcesEl.appendChild(card);
+
+  marker.addEventListener("click", () => {
+    card.style.display = card.style.display === "none" ? "block" : "none";
+  });
+}
+
+async function* parseSSE(response) {
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    let boundary;
+    while ((boundary = buffer.indexOf("\n\n")) !== -1) {
+      const rawEvent = buffer.slice(0, boundary);
+      buffer = buffer.slice(boundary + 2);
+      let eventType = "message";
+      let data = "";
+      for (const line of rawEvent.split("\n")) {
+        if (line.startsWith("event:")) eventType = line.slice(6).trim();
+        else if (line.startsWith("data:")) data += line.slice(5).trim();
+      }
+      if (data) yield { event: eventType, data: JSON.parse(data) };
+    }
+  }
+}
+
+async function runQuery(query) {
+  resetOutputs();
+  askButton.disabled = true;
+  try {
+    const response = await fetch("/v1/query", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query }),
+    });
+
+    if (response.status !== 200) {
+      const payload = await response.json();
+      showRejection(payload);
+      return;
+    }
+
+    for await (const { event, data } of parseSSE(response)) {
+      if (event === "text") appendText(data.text);
+      else if (event === "citation") appendCitation(data);
+      else if (event === "logged") {
+        currentQueryLogId = data.query_log_id;
+        feedbackEl.classList.remove("hidden");
+      }
+    }
+  } catch (err) {
+    showRejection({ detail: "Something went wrong talking to the server.", retry_search: false });
+    console.error(err);
+  } finally {
+    askButton.disabled = false;
+  }
+}
+
+async function runDebugSearch(query) {
+  debugEl.innerHTML = "Loading retrieval scores…";
+  debugEl.classList.remove("hidden");
+  try {
+    const response = await fetch("/v1/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query }),
+    });
+    const payload = await response.json();
+    const rows = payload.results.map((r) => `
+      <tr>
+        <td>${r.nct_id}</td>
+        <td class="content-preview" title="${r.content.replace(/"/g, "&quot;")}">${r.content.slice(0, 60)}…</td>
+        <td>${r.dense_rank ?? "—"}</td>
+        <td>${r.dense_score?.toFixed(4) ?? "—"}</td>
+        <td>${r.sparse_rank ?? "—"}</td>
+        <td>${r.sparse_score?.toFixed(4) ?? "—"}</td>
+        <td>${r.rrf_score.toFixed(4)}</td>
+        <td>${r.rerank_score?.toFixed(4) ?? "—"}</td>
+      </tr>`).join("");
+    debugEl.innerHTML = `
+      <table>
+        <thead><tr>
+          <th>Study</th><th>Content</th><th>Dense rank</th><th>Dense score</th>
+          <th>Sparse rank</th><th>Sparse score</th><th>RRF</th><th>Rerank</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  } catch (err) {
+    debugEl.textContent = "Could not load retrieval debug info.";
+    console.error(err);
+  }
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const query = input.value.trim();
+  if (!query) return;
+  await runQuery(query);
+  if (debugToggle.checked) await runDebugSearch(query);
+});
+
+debugToggle.addEventListener("change", async () => {
+  const query = input.value.trim();
+  if (debugToggle.checked && query) await runDebugSearch(query);
+  else { debugEl.classList.add("hidden"); debugEl.innerHTML = ""; }
+});
+
+async function submitFeedback(rating) {
+  if (currentQueryLogId === null) return;
+  await fetch("/v1/feedback", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query_log_id: currentQueryLogId, rating }),
+  });
+  feedbackEl.classList.add("hidden");
+}
+
+document.getElementById("thumbs-up").addEventListener("click", () => submitFeedback(1));
+document.getElementById("thumbs-down").addEventListener("click", () => submitFeedback(-1));
+</script>
+</body>
+</html>
