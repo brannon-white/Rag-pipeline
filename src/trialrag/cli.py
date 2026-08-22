@@ -73,6 +73,11 @@ def migrate_db(
         settings = get_settings()
         conn = await asyncpg.connect(settings.asyncpg_dsn)
         try:
+            # See trialrag.db.pool._init_connection's docstring: Neon's pooler
+            # has been observed handing out sessions with an empty
+            # search_path, which would make every unqualified table reference
+            # in the migration SQL fail with "relation does not exist".
+            await conn.execute("SET search_path TO public")
             applied = await migrate(conn, dry_run=dry_run)
         finally:
             await conn.close()

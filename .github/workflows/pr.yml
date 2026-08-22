@@ -1,0 +1,56 @@
+name: PR
+
+# Mirrors `make check` exactly (lint, typecheck, test-integration) -- see the
+# Makefile's own comment: "Everything CI runs on a PR". Fully hermetic: no
+# external network calls, no API keys required. Settings.anthropic_api_key /
+# voyage_api_key both default to an empty SecretStr, so importing trialrag.*
+# and running the unit + integration suite needs no secrets at all -- only
+# the `network`-marked tests (real ClinicalTrials.gov / live Voyage calls)
+# require them, and those are excluded here by `-m "not network"`.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        # Same pinned image as docker-compose.yml -- halfvec/HNSW support
+        # requires this specific pgvector version, not whatever "latest" is.
+        image: pgvector/pgvector:0.8.1-pg17
+        env:
+          POSTGRES_USER: trialrag
+          POSTGRES_PASSWORD: trialrag
+          # tests/integration/conftest.py's TEST_DSN default points here
+          # directly -- never `trialrag`, the dev/ingest database name.
+          POSTGRES_DB: trialrag_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U trialrag -d trialrag_test"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - run: uv python install 3.13
+
+      - run: uv sync --all-extras
+
+      - name: lint
+        run: uv run ruff check .
+
+      - name: typecheck
+        run: uv run mypy
+
+      - name: test (unit + integration, no network)
+        run: uv run pytest tests/ -m "not network"

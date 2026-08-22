@@ -31,10 +31,20 @@ async def _init_connection(conn: asyncpg.Connection) -> None:
 
     Registering the pgvector codecs here rather than at call sites is what lets
     query code pass and receive plain Python lists of floats.
+
+    ``search_path`` is pinned explicitly rather than left to the role/database
+    default: Neon's pooler was observed (live, against a fresh project) handing
+    out sessions with an empty ``search_path`` -- every unqualified table
+    reference then fails with "relation does not exist" -- inconsistently with
+    plain direct connections, which see the normal ``"$user", public`` default.
+    Setting it here, in the per-connection init hook, is immune to that: it
+    runs against the exact backend session asyncpg just got, regardless of
+    what the pooler did or didn't carry over.
     """
     from pgvector.asyncpg import register_vector
 
     await register_vector(conn)
+    await conn.execute("SET search_path TO public")
 
 
 class Database:
