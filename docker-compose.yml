@@ -1,0 +1,50 @@
+# Local development stack. Mirrors production topology (Postgres + pgvector,
+# OTLP collector) so that retrieval SQL and tracing behave the same here as on
+# App Runner + Neon. Not used in deployment -- Terraform owns that.
+
+services:
+  postgres:
+    # pgvector's own image, pinned: halfvec and HNSW arrived in 0.7/0.5
+    # respectively, and a silently older extension turns the schema's
+    # halfvec(512) column into a startup failure rather than a slow query.
+    image: pgvector/pgvector:0.8.1-pg17
+    container_name: trialrag-postgres
+    environment:
+      POSTGRES_USER: trialrag
+      POSTGRES_PASSWORD: trialrag
+      POSTGRES_DB: trialrag
+      # Local disposable data: skip fsync for a much faster corpus load.
+      # Never do this anywhere the data matters.
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    command: >
+      postgres
+      -c fsync=off
+      -c synchronous_commit=off
+      -c full_page_writes=off
+      -c shared_buffers=512MB
+      -c maintenance_work_mem=512MB
+      -c max_parallel_maintenance_workers=2
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trialrag -d trialrag"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.139.0
+    container_name: trialrag-otel
+    command: ["--config=/etc/otel/config.yaml"]
+    volumes:
+      - ./docker/otel-collector.yaml:/etc/otel/config.yaml:ro
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+    profiles: ["obs"]  # opt-in: `docker compose --profile obs up`
+
+volumes:
+  postgres_data:

@@ -131,7 +131,7 @@ mypy_path = "src"
 packages = ["trialrag"]
 
 [[tool.mypy.overrides]]
-module = ["voyageai.*", "pgvector.*", "ragas.*"]
+module = ["voyageai.*", "pgvector.*", "ragas.*", "asyncpg.*"]
 ignore_missing_imports = true
 # These packages ship no py.typed and re-export from private submodules without
 # an __all__, which strict mode's no_implicit_reexport rejects. Scoped to third
