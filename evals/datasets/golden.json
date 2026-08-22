@@ -1,0 +1,1510 @@
+[
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05499702"
+    ],
+    "id": "fact_phase:NCT05499702",
+    "query_text": "What phase is the clinical trial titled \"The Effects of Glucagon on Hepatic Metabolism in People With Type 2 Diabetes After Caloric Restriction\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05499702"
+    ],
+    "id": "fact_sponsor:NCT05499702",
+    "query_text": "Who is the lead sponsor of the trial titled \"The Effects of Glucagon on Hepatic Metabolism in People With Type 2 Diabetes After Caloric Restriction\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Adrian Vella"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05499702"
+    ],
+    "id": "fact_condition:NCT05499702",
+    "query_text": "What medical condition does the trial titled \"The Effects of Glucagon on Hepatic Metabolism in People With Type 2 Diabetes After Caloric Restriction\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Type2diabetes"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03900637"
+    ],
+    "id": "fact_phase:NCT03900637",
+    "query_text": "What phase is the clinical trial titled \"PersonaLized neoAdjuvant Strategy ER Positive and HER2 Negative Breast Cancer TO Increase BCS Rate\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03900637"
+    ],
+    "id": "fact_sponsor:NCT03900637",
+    "query_text": "Who is the lead sponsor of the trial titled \"PersonaLized neoAdjuvant Strategy ER Positive and HER2 Negative Breast Cancer TO Increase BCS Rate\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Seoul National University Hospital"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03900637"
+    ],
+    "id": "fact_condition:NCT03900637",
+    "query_text": "What medical condition does the trial titled \"PersonaLized neoAdjuvant Strategy ER Positive and HER2 Negative Breast Cancer TO Increase BCS Rate\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Breast Cancer"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01645839"
+    ],
+    "id": "fact_phase:NCT01645839",
+    "query_text": "What phase is the clinical trial titled \"Interest of Intrathecal Chemotherapy With Liposomal Cytarabine (DepoCyte\u00ae) in Meningeal Metastasis of Breast Cancer\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01645839"
+    ],
+    "id": "fact_sponsor:NCT01645839",
+    "query_text": "Who is the lead sponsor of the trial titled \"Interest of Intrathecal Chemotherapy With Liposomal Cytarabine (DepoCyte\u00ae) in Meningeal Metastasis of Breast Cancer\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Centre Oscar Lambret"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01645839"
+    ],
+    "id": "fact_condition:NCT01645839",
+    "query_text": "What medical condition does the trial titled \"Interest of Intrathecal Chemotherapy With Liposomal Cytarabine (DepoCyte\u00ae) in Meningeal Metastasis of Breast Cancer\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Breast Cancer",
+        "Leptomeningeal Metastases"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05472792"
+    ],
+    "id": "fact_phase:NCT05472792",
+    "query_text": "What phase is the clinical trial titled \"Compare Adjuvant Monotherapy With Endocrine or Accelerated Partial Breast Irradiation After Lumpectomy\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05472792"
+    ],
+    "id": "fact_sponsor:NCT05472792",
+    "query_text": "Who is the lead sponsor of the trial titled \"Compare Adjuvant Monotherapy With Endocrine or Accelerated Partial Breast Irradiation After Lumpectomy\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "UNC Lineberger Comprehensive Cancer Center"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT05472792"
+    ],
+    "id": "fact_condition:NCT05472792",
+    "query_text": "What medical condition does the trial titled \"Compare Adjuvant Monotherapy With Endocrine or Accelerated Partial Breast Irradiation After Lumpectomy\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Breast Cancer",
+        "Quality of Life"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00359736"
+    ],
+    "id": "fact_phase:NCT00359736",
+    "query_text": "What phase is the clinical trial titled \"Sildenafil Study to Treat Idiopathic Pulmonary Fibrosis\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00359736"
+    ],
+    "id": "fact_sponsor:NCT00359736",
+    "query_text": "Who is the lead sponsor of the trial titled \"Sildenafil Study to Treat Idiopathic Pulmonary Fibrosis\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "VA Office of Research and Development"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00359736"
+    ],
+    "id": "fact_condition:NCT00359736",
+    "query_text": "What medical condition does the trial titled \"Sildenafil Study to Treat Idiopathic Pulmonary Fibrosis\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Alveolitis, Fibrosing",
+        "Fibrosis, Pulmonary",
+        "Hypertension, Pulmonary"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01470144"
+    ],
+    "id": "fact_phase:NCT01470144",
+    "query_text": "What phase is the clinical trial titled \"Epoprostenol for Injection in Patients With Pulmonary Arterial Hypertension\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01470144"
+    ],
+    "id": "fact_sponsor:NCT01470144",
+    "query_text": "Who is the lead sponsor of the trial titled \"Epoprostenol for Injection in Patients With Pulmonary Arterial Hypertension\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Actelion"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01470144"
+    ],
+    "id": "fact_condition:NCT01470144",
+    "query_text": "What medical condition does the trial titled \"Epoprostenol for Injection in Patients With Pulmonary Arterial Hypertension\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Pulmonary Arterial Hypertension"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01010581"
+    ],
+    "id": "fact_phase:NCT01010581",
+    "query_text": "What phase is the clinical trial titled \"SC12267 (4SC-101) in Combination With Methotrexate in Patients With Rheumatoid Arthritis\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01010581"
+    ],
+    "id": "fact_sponsor:NCT01010581",
+    "query_text": "Who is the lead sponsor of the trial titled \"SC12267 (4SC-101) in Combination With Methotrexate in Patients With Rheumatoid Arthritis\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "4SC AG"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01010581"
+    ],
+    "id": "fact_condition:NCT01010581",
+    "query_text": "What medical condition does the trial titled \"SC12267 (4SC-101) in Combination With Methotrexate in Patients With Rheumatoid Arthritis\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Rheumatoid Arthritis"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00082381"
+    ],
+    "id": "fact_phase:NCT00082381",
+    "query_text": "What phase is the clinical trial titled \"Effect of AC2993 Compared With Insulin Glargine in Patients With Type 2 Diabetes Also Using Combination Therapy With Sulfonylurea and Metformin\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00082381"
+    ],
+    "id": "fact_sponsor:NCT00082381",
+    "query_text": "Who is the lead sponsor of the trial titled \"Effect of AC2993 Compared With Insulin Glargine in Patients With Type 2 Diabetes Also Using Combination Therapy With Sulfonylurea and Metformin\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "AstraZeneca"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00082381"
+    ],
+    "id": "fact_condition:NCT00082381",
+    "query_text": "What medical condition does the trial titled \"Effect of AC2993 Compared With Insulin Glargine in Patients With Type 2 Diabetes Also Using Combination Therapy With Sulfonylurea and Metformin\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Diabetes Mellitus, Type 2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01368081"
+    ],
+    "id": "fact_phase:NCT01368081",
+    "query_text": "What phase is the clinical trial titled \"Empagliflozin (BI 10773) Comprehensive add-on Study in Japanese Subjects With Type 2 Diabetes Mellitus\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01368081"
+    ],
+    "id": "fact_sponsor:NCT01368081",
+    "query_text": "Who is the lead sponsor of the trial titled \"Empagliflozin (BI 10773) Comprehensive add-on Study in Japanese Subjects With Type 2 Diabetes Mellitus\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Boehringer Ingelheim"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01368081"
+    ],
+    "id": "fact_condition:NCT01368081",
+    "query_text": "What medical condition does the trial titled \"Empagliflozin (BI 10773) Comprehensive add-on Study in Japanese Subjects With Type 2 Diabetes Mellitus\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Diabetes Mellitus, Type 2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00347919"
+    ],
+    "id": "fact_phase:NCT00347919",
+    "query_text": "What phase is the clinical trial titled \"Pazopanib Plus Lapatinib Compared To Lapatinib Alone In Subjects With Advanced Or Metastatic Breast Cancer\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00347919"
+    ],
+    "id": "fact_sponsor:NCT00347919",
+    "query_text": "Who is the lead sponsor of the trial titled \"Pazopanib Plus Lapatinib Compared To Lapatinib Alone In Subjects With Advanced Or Metastatic Breast Cancer\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "GlaxoSmithKline"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00347919"
+    ],
+    "id": "fact_condition:NCT00347919",
+    "query_text": "What medical condition does the trial titled \"Pazopanib Plus Lapatinib Compared To Lapatinib Alone In Subjects With Advanced Or Metastatic Breast Cancer\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Neoplasms, Breast"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03842267"
+    ],
+    "id": "fact_phase:NCT03842267",
+    "query_text": "What phase is the clinical trial titled \"A Study to Evaluate the Efficacy and Safety of Gemigliptin in Type 2 Diabetes Who Have Inadequate GlycemIc Control With Dapagliflozin and Metformin (SOLUTION Study)\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03842267"
+    ],
+    "id": "fact_sponsor:NCT03842267",
+    "query_text": "Who is the lead sponsor of the trial titled \"A Study to Evaluate the Efficacy and Safety of Gemigliptin in Type 2 Diabetes Who Have Inadequate GlycemIc Control With Dapagliflozin and Metformin (SOLUTION Study)\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "LG Chem"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03842267"
+    ],
+    "id": "fact_condition:NCT03842267",
+    "query_text": "What medical condition does the trial titled \"A Study to Evaluate the Efficacy and Safety of Gemigliptin in Type 2 Diabetes Who Have Inadequate GlycemIc Control With Dapagliflozin and Metformin (SOLUTION Study)\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Diabetes Mellitus, Type 2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03951207"
+    ],
+    "id": "fact_phase:NCT03951207",
+    "query_text": "What phase is the clinical trial titled \"Rosuvastatin/Amlodipine vs Atorvastatin/Amlodipine in Hypertension Patient With Dyslipidemia\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE4"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03951207"
+    ],
+    "id": "fact_sponsor:NCT03951207",
+    "query_text": "Who is the lead sponsor of the trial titled \"Rosuvastatin/Amlodipine vs Atorvastatin/Amlodipine in Hypertension Patient With Dyslipidemia\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Yuhan Corporation"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03951207"
+    ],
+    "id": "fact_condition:NCT03951207",
+    "query_text": "What medical condition does the trial titled \"Rosuvastatin/Amlodipine vs Atorvastatin/Amlodipine in Hypertension Patient With Dyslipidemia\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Dyslipidemias",
+        "Hypertension"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01558063"
+    ],
+    "id": "fact_phase:NCT01558063",
+    "query_text": "What phase is the clinical trial titled \"Ketamine in the Treatment of Depression\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01558063"
+    ],
+    "id": "fact_sponsor:NCT01558063",
+    "query_text": "Who is the lead sponsor of the trial titled \"Ketamine in the Treatment of Depression\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Columbia University"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01558063"
+    ],
+    "id": "fact_condition:NCT01558063",
+    "query_text": "What medical condition does the trial titled \"Ketamine in the Treatment of Depression\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Major Depressive Disorder"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT06175351"
+    ],
+    "id": "fact_phase:NCT06175351",
+    "query_text": "What phase is the clinical trial titled \"Study to Evaluate the Pharmacokinetic Characteristics, Safety, Tolerability, and Preliminary Efficacy of 9MW1911 in Patients With Chronic Obstructive Pulmonary Disease (COPD).\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT06175351"
+    ],
+    "id": "fact_sponsor:NCT06175351",
+    "query_text": "Who is the lead sponsor of the trial titled \"Study to Evaluate the Pharmacokinetic Characteristics, Safety, Tolerability, and Preliminary Efficacy of 9MW1911 in Patients With Chronic Obstructive Pulmonary Disease (COPD).\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Mabwell (Shanghai) Bioscience Co., Ltd."
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT06175351"
+    ],
+    "id": "fact_condition:NCT06175351",
+    "query_text": "What medical condition does the trial titled \"Study to Evaluate the Pharmacokinetic Characteristics, Safety, Tolerability, and Preliminary Efficacy of 9MW1911 in Patients With Chronic Obstructive Pulmonary Disease (COPD).\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03248128"
+    ],
+    "id": "fact_phase:NCT03248128",
+    "query_text": "What phase is the clinical trial titled \"Safety and Efficacy Study of Fluticasone Furoate/Vilanterol (FF/VI) Fixed Dose Combination (FDC) Compared to FF Alone in Subjects With Asthma\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03248128"
+    ],
+    "id": "fact_sponsor:NCT03248128",
+    "query_text": "Who is the lead sponsor of the trial titled \"Safety and Efficacy Study of Fluticasone Furoate/Vilanterol (FF/VI) Fixed Dose Combination (FDC) Compared to FF Alone in Subjects With Asthma\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "GlaxoSmithKline"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03248128"
+    ],
+    "id": "fact_condition:NCT03248128",
+    "query_text": "What medical condition does the trial titled \"Safety and Efficacy Study of Fluticasone Furoate/Vilanterol (FF/VI) Fixed Dose Combination (FDC) Compared to FF Alone in Subjects With Asthma\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Asthma"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "fact_phase:NCT04737265",
+    "query_text": "What phase is the clinical trial titled \"Pilot Study of an NTproBNP Guided Strategy of Cardioprotection\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "fact_sponsor:NCT04737265",
+    "query_text": "Who is the lead sponsor of the trial titled \"Pilot Study of an NTproBNP Guided Strategy of Cardioprotection\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Abramson Cancer Center at Penn Medicine"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "fact_condition:NCT04737265",
+    "query_text": "What medical condition does the trial titled \"Pilot Study of an NTproBNP Guided Strategy of Cardioprotection\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Cardiotoxicity",
+        "Toxicity Due to Chemotherapy",
+        "Breast Cancer",
+        "Lymphoma",
+        "Cardiomyopathies",
+        "Heart Failure"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03170336"
+    ],
+    "id": "fact_phase:NCT03170336",
+    "query_text": "What phase is the clinical trial titled \"A New Application of Amiloride in the Treatment of Patient With Chronic Kidney Disease In Reducing Urinary PROtein\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE4"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03170336"
+    ],
+    "id": "fact_sponsor:NCT03170336",
+    "query_text": "Who is the lead sponsor of the trial titled \"A New Application of Amiloride in the Treatment of Patient With Chronic Kidney Disease In Reducing Urinary PROtein\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Guangdong Provincial People's Hospital"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03170336"
+    ],
+    "id": "fact_condition:NCT03170336",
+    "query_text": "What medical condition does the trial titled \"A New Application of Amiloride in the Treatment of Patient With Chronic Kidney Disease In Reducing Urinary PROtein\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Chronic Kidney Diseases"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01218100"
+    ],
+    "id": "fact_phase:NCT01218100",
+    "query_text": "What phase is the clinical trial titled \"Efficacy and Safety Study to Evaluate Combination Therapy With Nebivolol and Lisinopril vs. Placebo and Monotherapy in Patients With Stage 2 Diastolic Hypertension\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE4"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01218100"
+    ],
+    "id": "fact_sponsor:NCT01218100",
+    "query_text": "Who is the lead sponsor of the trial titled \"Efficacy and Safety Study to Evaluate Combination Therapy With Nebivolol and Lisinopril vs. Placebo and Monotherapy in Patients With Stage 2 Diastolic Hypertension\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Forest Laboratories"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01218100"
+    ],
+    "id": "fact_condition:NCT01218100",
+    "query_text": "What medical condition does the trial titled \"Efficacy and Safety Study to Evaluate Combination Therapy With Nebivolol and Lisinopril vs. Placebo and Monotherapy in Patients With Stage 2 Diastolic Hypertension\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Stage 2 Diastolic Hypertension"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01999907"
+    ],
+    "id": "fact_phase:NCT01999907",
+    "query_text": "What phase is the clinical trial titled \"Vitamin D to Reduce Colds and Asthma Attacks in Young Children\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01999907"
+    ],
+    "id": "fact_sponsor:NCT01999907",
+    "query_text": "Who is the lead sponsor of the trial titled \"Vitamin D to Reduce Colds and Asthma Attacks in Young Children\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "St. Justine's Hospital"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01999907"
+    ],
+    "id": "fact_condition:NCT01999907",
+    "query_text": "What medical condition does the trial titled \"Vitamin D to Reduce Colds and Asthma Attacks in Young Children\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Asthma"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01034111"
+    ],
+    "id": "fact_phase:NCT01034111",
+    "query_text": "What phase is the clinical trial titled \"A Local Experiential Study With Sitagliptin (an Antihyperglycemic Drug) in 30 Patients With Type 2 Diabetes Mellitus (0431-178)\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01034111"
+    ],
+    "id": "fact_sponsor:NCT01034111",
+    "query_text": "Who is the lead sponsor of the trial titled \"A Local Experiential Study With Sitagliptin (an Antihyperglycemic Drug) in 30 Patients With Type 2 Diabetes Mellitus (0431-178)\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Merck Sharp & Dohme LLC"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01034111"
+    ],
+    "id": "fact_condition:NCT01034111",
+    "query_text": "What medical condition does the trial titled \"A Local Experiential Study With Sitagliptin (an Antihyperglycemic Drug) in 30 Patients With Type 2 Diabetes Mellitus (0431-178)\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04692493"
+    ],
+    "id": "fact_phase:NCT04692493",
+    "query_text": "What phase is the clinical trial titled \"RA-PRO PRAGMATIC TRIAL\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04692493"
+    ],
+    "id": "fact_sponsor:NCT04692493",
+    "query_text": "Who is the lead sponsor of the trial titled \"RA-PRO PRAGMATIC TRIAL\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "University of Alabama at Birmingham"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04692493"
+    ],
+    "id": "fact_condition:NCT04692493",
+    "query_text": "What medical condition does the trial titled \"RA-PRO PRAGMATIC TRIAL\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Rheumatoid Arthritis"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01416493"
+    ],
+    "id": "fact_phase:NCT01416493",
+    "query_text": "What phase is the clinical trial titled \"Bovine Intestinal Alkaline Phosphatase (bIAP) Modulating Rheumatoid Arthritis\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01416493"
+    ],
+    "id": "fact_sponsor:NCT01416493",
+    "query_text": "Who is the lead sponsor of the trial titled \"Bovine Intestinal Alkaline Phosphatase (bIAP) Modulating Rheumatoid Arthritis\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Alloksys Life Sciences B.V."
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01416493"
+    ],
+    "id": "fact_condition:NCT01416493",
+    "query_text": "What medical condition does the trial titled \"Bovine Intestinal Alkaline Phosphatase (bIAP) Modulating Rheumatoid Arthritis\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Acute Rheumatoid Arthritis"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00843193"
+    ],
+    "id": "fact_phase:NCT00843193",
+    "query_text": "What phase is the clinical trial titled \"Efficacy and Safety Study of GSK679586 in Patients With Severe Asthma\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00843193"
+    ],
+    "id": "fact_sponsor:NCT00843193",
+    "query_text": "Who is the lead sponsor of the trial titled \"Efficacy and Safety Study of GSK679586 in Patients With Severe Asthma\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "GlaxoSmithKline"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00843193"
+    ],
+    "id": "fact_condition:NCT00843193",
+    "query_text": "What medical condition does the trial titled \"Efficacy and Safety Study of GSK679586 in Patients With Severe Asthma\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Asthma"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00669864"
+    ],
+    "id": "fact_phase:NCT00669864",
+    "query_text": "What phase is the clinical trial titled \"Effect of Biphasic Insulin Aspart 30 Combined With Metformin on Blood Glucose Control in Subjects With Type 2 Diabetes Inadequately Controlled With Basal Insulin\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE4"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00669864"
+    ],
+    "id": "fact_sponsor:NCT00669864",
+    "query_text": "Who is the lead sponsor of the trial titled \"Effect of Biphasic Insulin Aspart 30 Combined With Metformin on Blood Glucose Control in Subjects With Type 2 Diabetes Inadequately Controlled With Basal Insulin\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Novo Nordisk A/S"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00669864"
+    ],
+    "id": "fact_condition:NCT00669864",
+    "query_text": "What medical condition does the trial titled \"Effect of Biphasic Insulin Aspart 30 Combined With Metformin on Blood Glucose Control in Subjects With Type 2 Diabetes Inadequately Controlled With Basal Insulin\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Diabetes",
+        "Diabetes Mellitus, Type 2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00003032"
+    ],
+    "id": "fact_phase:NCT00003032",
+    "query_text": "What phase is the clinical trial titled \"High Dose Chemotherapy Plus Peripheral Stem Cell Transplantation Compared With Standard Therapy in Treating Women With Metastatic or Recurrent Breast Cancer\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00003032"
+    ],
+    "id": "fact_sponsor:NCT00003032",
+    "query_text": "Who is the lead sponsor of the trial titled \"High Dose Chemotherapy Plus Peripheral Stem Cell Transplantation Compared With Standard Therapy in Treating Women With Metastatic or Recurrent Breast Cancer\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "NCIC Clinical Trials Group"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00003032"
+    ],
+    "id": "fact_condition:NCT00003032",
+    "query_text": "What medical condition does the trial titled \"High Dose Chemotherapy Plus Peripheral Stem Cell Transplantation Compared With Standard Therapy in Treating Women With Metastatic or Recurrent Breast Cancer\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Breast Cancer"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04053764"
+    ],
+    "id": "fact_phase:NCT04053764",
+    "query_text": "What phase is the clinical trial titled \"Study Exploring the Effect of Crizanlizumab on Kidney Function in Patients With Chronic Kidney Disease Caused by Sickle Cell Disease\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04053764"
+    ],
+    "id": "fact_sponsor:NCT04053764",
+    "query_text": "Who is the lead sponsor of the trial titled \"Study Exploring the Effect of Crizanlizumab on Kidney Function in Patients With Chronic Kidney Disease Caused by Sickle Cell Disease\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Novartis Pharmaceuticals"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT04053764"
+    ],
+    "id": "fact_condition:NCT04053764",
+    "query_text": "What medical condition does the trial titled \"Study Exploring the Effect of Crizanlizumab on Kidney Function in Patients With Chronic Kidney Disease Caused by Sickle Cell Disease\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Sickle Cell Disease (SCD)"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03481998"
+    ],
+    "id": "fact_phase:NCT03481998",
+    "query_text": "What phase is the clinical trial titled \"A Study of SHR6390 in Combination With Letrozole or Anastrozole or Fulvestrant in Patients With HR Positive and HER2 Negative Advanced Breast Cancer\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03481998"
+    ],
+    "id": "fact_sponsor:NCT03481998",
+    "query_text": "Who is the lead sponsor of the trial titled \"A Study of SHR6390 in Combination With Letrozole or Anastrozole or Fulvestrant in Patients With HR Positive and HER2 Negative Advanced Breast Cancer\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Jiangsu HengRui Medicine Co., Ltd."
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT03481998"
+    ],
+    "id": "fact_condition:NCT03481998",
+    "query_text": "What medical condition does the trial titled \"A Study of SHR6390 in Combination With Letrozole or Anastrozole or Fulvestrant in Patients With HR Positive and HER2 Negative Advanced Breast Cancer\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Advanced Breast Cancer"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00852930"
+    ],
+    "id": "fact_phase:NCT00852930",
+    "query_text": "What phase is the clinical trial titled \"Low Level Laser Treatment and Breast Cancer Related Lymphedema\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE4"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00852930"
+    ],
+    "id": "fact_sponsor:NCT00852930",
+    "query_text": "Who is the lead sponsor of the trial titled \"Low Level Laser Treatment and Breast Cancer Related Lymphedema\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "Vanderbilt University"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00852930"
+    ],
+    "id": "fact_condition:NCT00852930",
+    "query_text": "What medical condition does the trial titled \"Low Level Laser Treatment and Breast Cancer Related Lymphedema\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Lymphedema"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00666328"
+    ],
+    "id": "fact_phase:NCT00666328",
+    "query_text": "What phase is the clinical trial titled \"Clevidipine in the Treatment of Patients With Acute Hypertension and Intracerebral Hemorrhage (ACCELERATE)\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00666328"
+    ],
+    "id": "fact_sponsor:NCT00666328",
+    "query_text": "Who is the lead sponsor of the trial titled \"Clevidipine in the Treatment of Patients With Acute Hypertension and Intracerebral Hemorrhage (ACCELERATE)\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "The Medicines Company"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT00666328"
+    ],
+    "id": "fact_condition:NCT00666328",
+    "query_text": "What medical condition does the trial titled \"Clevidipine in the Treatment of Patients With Acute Hypertension and Intracerebral Hemorrhage (ACCELERATE)\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Hypertension",
+        "Hemorrhage"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01155765"
+    ],
+    "id": "fact_phase:NCT01155765",
+    "query_text": "What phase is the clinical trial titled \"Prasugrel Versus High Dose Clopidogrel in Clopidogrel Resistant Patients Undergoing Chronic Hemodialysis\"?",
+    "query_type": "fact_phase",
+    "source_fields": {
+      "phases": [
+        "PHASE3"
+      ]
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01155765"
+    ],
+    "id": "fact_sponsor:NCT01155765",
+    "query_text": "Who is the lead sponsor of the trial titled \"Prasugrel Versus High Dose Clopidogrel in Clopidogrel Resistant Patients Undergoing Chronic Hemodialysis\"?",
+    "query_type": "fact_sponsor",
+    "source_fields": {
+      "lead_sponsor": "University of Patras"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [
+      "NCT01155765"
+    ],
+    "id": "fact_condition:NCT01155765",
+    "query_text": "What medical condition does the trial titled \"Prasugrel Versus High Dose Clopidogrel in Clopidogrel Resistant Patients Undergoing Chronic Hemodialysis\" study?",
+    "query_type": "fact_condition",
+    "source_fields": {
+      "conditions": [
+        "Hemodialysis",
+        "Chronic Renal Failure"
+      ]
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT03900637",
+      "NCT04737265",
+      "NCT05472792"
+    ],
+    "id": "multi_hop:PHASE2:Breast Cancer",
+    "query_text": "Which Phase 2 trials are studying Breast Cancer?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Breast Cancer",
+      "phase": "PHASE2"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT00082381",
+      "NCT01368081",
+      "NCT03842267"
+    ],
+    "id": "multi_hop:PHASE3:Diabetes Mellitus, Type 2",
+    "query_text": "Which Phase 3 trials are studying Diabetes Mellitus, Type 2?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Diabetes Mellitus, Type 2",
+      "phase": "PHASE3"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT00843193",
+      "NCT01999907"
+    ],
+    "id": "multi_hop:PHASE2:Asthma",
+    "query_text": "Which Phase 2 trials are studying Asthma?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Asthma",
+      "phase": "PHASE2"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT00003032",
+      "NCT01645839"
+    ],
+    "id": "multi_hop:PHASE3:Breast Cancer",
+    "query_text": "Which Phase 3 trials are studying Breast Cancer?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Breast Cancer",
+      "phase": "PHASE3"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT01416493"
+    ],
+    "id": "multi_hop:PHASE1:Acute Rheumatoid Arthritis",
+    "query_text": "Which Phase 1 trials are studying Acute Rheumatoid Arthritis?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Acute Rheumatoid Arthritis",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT03481998"
+    ],
+    "id": "multi_hop:PHASE1:Advanced Breast Cancer",
+    "query_text": "Which Phase 1 trials are studying Advanced Breast Cancer?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Advanced Breast Cancer",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Breast Cancer",
+    "query_text": "Which Phase 1 trials are studying Breast Cancer?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Breast Cancer",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Cardiomyopathies",
+    "query_text": "Which Phase 1 trials are studying Cardiomyopathies?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Cardiomyopathies",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Cardiotoxicity",
+    "query_text": "Which Phase 1 trials are studying Cardiotoxicity?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Cardiotoxicity",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Heart Failure",
+    "query_text": "Which Phase 1 trials are studying Heart Failure?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Heart Failure",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Lymphoma",
+    "query_text": "Which Phase 1 trials are studying Lymphoma?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Lymphoma",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT06175351"
+    ],
+    "id": "multi_hop:PHASE1:Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)",
+    "query_text": "Which Phase 1 trials are studying Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT04737265"
+    ],
+    "id": "multi_hop:PHASE1:Toxicity Due to Chemotherapy",
+    "query_text": "Which Phase 1 trials are studying Toxicity Due to Chemotherapy?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Toxicity Due to Chemotherapy",
+      "phase": "PHASE1"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT01416493"
+    ],
+    "id": "multi_hop:PHASE2:Acute Rheumatoid Arthritis",
+    "query_text": "Which Phase 2 trials are studying Acute Rheumatoid Arthritis?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Acute Rheumatoid Arthritis",
+      "phase": "PHASE2"
+    }
+  },
+  {
+    "filters": {
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    "gold_nct_ids": [
+      "NCT03481998"
+    ],
+    "id": "multi_hop:PHASE2:Advanced Breast Cancer",
+    "query_text": "Which Phase 2 trials are studying Advanced Breast Cancer?",
+    "query_type": "multi_hop",
+    "source_fields": {
+      "condition": "Advanced Breast Cancer",
+      "phase": "PHASE2"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [],
+    "id": "unanswerable:0",
+    "query_text": "What trials are studying Xyloquinamine-9 Deficiency Syndrome?",
+    "query_type": "unanswerable",
+    "source_fields": {
+      "fabricated_condition": "Xyloquinamine-9 Deficiency Syndrome"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [],
+    "id": "unanswerable:1",
+    "query_text": "What trials are studying Zorbitant-Resistant Fictivemia?",
+    "query_type": "unanswerable",
+    "source_fields": {
+      "fabricated_condition": "Zorbitant-Resistant Fictivemia"
+    }
+  },
+  {
+    "filters": {},
+    "gold_nct_ids": [],
+    "id": "unanswerable:2",
+    "query_text": "What trials are studying Quenlar's Paradoxical Neurocytopathy?",
+    "query_type": "unanswerable",
+    "source_fields": {
+      "fabricated_condition": "Quenlar's Paradoxical Neurocytopathy"
+    }
+  }
+]

@@ -127,8 +127,8 @@ strict = true
 warn_unreachable = true
 disallow_any_generics = true
 plugins = ["pydantic.mypy"]
-mypy_path = "src"
-packages = ["trialrag"]
+mypy_path = ["src", "."]
+packages = ["trialrag", "evals"]
 
 [[tool.mypy.overrides]]
 module = ["voyageai.*", "pgvector.*", "ragas.*", "asyncpg.*"]
@@ -143,6 +143,13 @@ implicit_reexport = true
 # ---------------------------------------------------------------------------
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Puts the repo root on sys.path for the whole session, so `evals` (a plain
+# top-level package, not part of the installed trialrag distribution) is
+# importable from any test file regardless of that file's own directory --
+# pytest's default rootdir-based import-mode resolution otherwise depends on
+# which directory the test lives in, which is what made `tests.integration.*`
+# imports fail earlier (see tests/integration/test_conftest_guard.py).
+pythonpath = ["."]
 asyncio_mode = "auto"
 addopts = "-q --strict-markers --strict-config"
 markers = [
