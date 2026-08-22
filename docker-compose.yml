@@ -28,6 +28,10 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      # Creates `trialrag_test`, a database dedicated to the integration
+      # suite's DROP-SCHEMA-per-test isolation -- see the script's own
+      # docstring for the incident that made this non-optional.
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U trialrag -d trialrag"]
       interval: 3s
