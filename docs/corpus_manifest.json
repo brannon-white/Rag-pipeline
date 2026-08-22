@@ -1,30 +1,30 @@
 {
-  "avg_chunk_tokens": 104.0,
-  "chunk_count": 434,
+  "avg_chunk_tokens": 104.5,
+  "chunk_count": 432,
   "chunks_by_section": {
     "arm_group": 63,
     "brief_summary": 30,
     "detailed_description": 24,
     "eligibility_exclusion": 37,
-    "eligibility_inclusion": 35,
+    "eligibility_inclusion": 33,
     "eligibility_other": 7,
     "intervention": 67,
     "primary_outcome": 42,
     "secondary_outcome": 129
   },
-  "location_count": 766,
+  "location_count": 764,
   "studies_by_phase": {
     "PHASE1": 4,
     "PHASE2": 14,
-    "PHASE3": 12,
+    "PHASE3": 11,
     "PHASE4": 5
   },
   "studies_by_status": {
     "ACTIVE_NOT_RECRUITING": 2,
     "COMPLETED": 25,
-    "RECRUITING": 4
+    "RECRUITING": 3
   },
-  "study_count": 31,
+  "study_count": 30,
   "top_conditions": {
     "Acute Rheumatoid Arthritis": 1,
     "Advanced Breast Cancer": 1,
@@ -33,13 +33,13 @@
     "Cardiotoxicity": 1,
     "Chronic Kidney Diseases": 1,
     "Chronic Renal Failure": 1,
-    "Diabetes": 2,
+    "Diabetes": 1,
     "Diabetes Mellitus, Type 2": 4,
     "Fibrosis, Pulmonary": 1,
+    "Hemorrhage": 1,
     "Hypertension": 2,
     "Hypertension, Pulmonary": 1,
     "Leptomeningeal Metastases": 1,
-    "Lymphedema": 1,
     "Lymphoma": 1,
     "Major Depressive Disorder": 1,
     "Moderate to Severe Chronic Obstructive Pulmonary Disease (COPD)": 1,
@@ -52,5 +52,5 @@
     "Type 2 Diabetes": 1,
     "Type2diabetes": 1
   },
-  "total_tokens": 45155
+  "total_tokens": 45147
 }
