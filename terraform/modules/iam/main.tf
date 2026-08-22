@@ -124,6 +124,24 @@ data "aws_iam_policy_document" "github_deploy_apprunner" {
     ]
     resources = ["*"] # App Runner deployment actions don't support resource-level scoping
   }
+
+  # update-service re-specifies the *entire* SourceConfiguration and
+  # InstanceConfiguration on every call (deploy.yml round-trips the current
+  # config rather than patching just the image tag -- see deploy.yml's
+  # comment on that), which means it re-passes both App Runner roles on
+  # every deploy, not just at initial creation. Confirmed live: without
+  # this, update-service fails with AccessDeniedException on iam:PassRole,
+  # not on anything apprunner:*-permission-shaped -- the App Runner action
+  # list above being correct doesn't help if the deploy role can't hand
+  # these roles to the service.
+  statement {
+    effect  = "Allow"
+    actions = ["iam:PassRole"]
+    resources = [
+      aws_iam_role.apprunner_ecr_access.arn,
+      aws_iam_role.apprunner_instance.arn,
+    ]
+  }
 }
 
 resource "aws_iam_role_policy" "github_deploy_apprunner" {
