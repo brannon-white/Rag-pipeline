@@ -115,6 +115,9 @@ class _FakeVoyageClient:
 
 def _embedder(**kwargs: Any) -> Embedder:
     kwargs.setdefault("batch_size", 8)
+    # Fast by default: the real 3 req/min production default would make any
+    # test issuing more than one request wait tens of seconds for real.
+    kwargs.setdefault("rate_limit_rpm", 6000.0)
     embedder = Embedder(model="voyage-4-lite", dim=16, **kwargs)
     embedder._client = _FakeVoyageClient()  # bypass real construction
     return embedder
@@ -216,3 +219,31 @@ async def test_stats_track_hit_rate() -> None:
     assert embedder.stats.cache_hits == 1
     assert embedder.stats.embedded == 1
     assert embedder.stats.hit_rate == pytest.approx(0.5)
+
+
+async def test_requests_are_paced_by_the_rate_limiter() -> None:
+    """Regression guard for the production incident: an unpaid Voyage account
+    is hard-capped at 3 req/min, and a real ingest run failed outright with
+    RateLimitError before the embedder paced its own requests. Uses a scaled
+    rate (120/min) so the property -- successive batches wait rather than
+    firing immediately -- is checked in well under a second."""
+    import asyncio
+
+    embedder = _embedder(batch_size=1, rate_limit_rpm=120.0)  # 2 req/s
+    chunks = [_chunk(f"criterion {i}", ordinal=i) for i in range(2)]
+
+    loop = asyncio.get_running_loop()
+    start = loop.time()
+    await embedder.embed_chunks(chunks, concurrency=1)
+    elapsed = loop.time() - start
+
+    assert embedder._client.calls == 2
+    assert elapsed >= 0.4  # 2nd of 2 sequential batches waits ~0.5s behind the 1st
+
+
+async def test_default_rate_limit_matches_unpaid_voyage_ceiling() -> None:
+    """Pins the production default to the observed real ceiling (3 req/min) --
+    a regression in this default is exactly what caused the original failure."""
+    embedder = Embedder(model="voyage-4-lite", dim=16)
+    embedder._client = _FakeVoyageClient()
+    assert embedder.rate_limit_rpm == 3.0

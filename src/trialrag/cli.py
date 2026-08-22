@@ -128,6 +128,7 @@ def ingest(
             dim=settings.embed_dim,
             batch_size=settings.embed_batch_size,
             api_key=settings.voyage_api_key.get_secret_value() or None,
+            rate_limit_rpm=settings.voyage_rate_limit_rpm,
         )
         study_filter = StudyFilter(conditions=conditions, phases=phases, statuses=statuses)
 

@@ -7,7 +7,6 @@ suite neither takes minutes nor spends the registry's ~50 req/min budget on CI.
 
 from __future__ import annotations
 
-import asyncio
 import json
 from typing import Any
 
@@ -18,7 +17,6 @@ from trialrag.ingest.fetch import (
     CtGovClient,
     CtGovError,
     StudyFilter,
-    TokenBucket,
     _user_agent,
     versions_of,
 )
@@ -55,45 +53,6 @@ def test_conditions_are_quoted_so_multiword_terms_stay_atomic() -> None:
         StudyFilter(conditions=["Type 2 Diabetes"], study_type=None).as_params()["query.cond"]
         == '"Type 2 Diabetes"'
     )
-
-
-# ---------------------------------------------------------------------------
-# Rate limiting
-# ---------------------------------------------------------------------------
-
-
-async def test_token_bucket_allows_initial_burst() -> None:
-    bucket = TokenBucket(60, capacity=5)
-    loop = asyncio.get_running_loop()
-    start = loop.time()
-    for _ in range(5):
-        await bucket.acquire()
-    assert loop.time() - start < 0.1
-
-
-async def test_token_bucket_throttles_beyond_capacity() -> None:
-    # 600/min = 10/s; capacity 1 means the 2nd token costs ~100ms.
-    bucket = TokenBucket(600, capacity=1)
-    loop = asyncio.get_running_loop()
-    await bucket.acquire()
-    start = loop.time()
-    await bucket.acquire()
-    assert loop.time() - start >= 0.05
-
-
-async def test_token_bucket_is_concurrency_safe() -> None:
-    """Parallel callers must not oversubscribe the shared budget."""
-    bucket = TokenBucket(600, capacity=2)
-    loop = asyncio.get_running_loop()
-    start = loop.time()
-    await asyncio.gather(*(bucket.acquire() for _ in range(10)))
-    # 2 free + 8 at 10/s -> at least ~0.7s of enforced spacing.
-    assert loop.time() - start >= 0.5
-
-
-def test_token_bucket_rejects_nonsense_rate() -> None:
-    with pytest.raises(ValueError, match="positive"):
-        TokenBucket(0)
 
 
 # ---------------------------------------------------------------------------

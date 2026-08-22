@@ -35,6 +35,7 @@ from tenacity import (
 )
 
 from trialrag.domain.models import ChunkCandidate
+from trialrag.ratelimit import TokenBucket
 
 logger = logging.getLogger(__name__)
 
@@ -99,11 +100,19 @@ class EmbedStats:
 
 @dataclass
 class Embedder:
-    """Batched, retrying, cache-aware embedding client.
+    """Batched, retrying, rate-limited, cache-aware embedding client.
 
     ``cache`` maps content hash to a stored vector. The ingest pipeline passes
     the set of hashes already present in Postgres, so a re-run embeds only what
     genuinely changed.
+
+    ``rate_limit_rpm`` defaults conservatively (see
+    :attr:`trialrag.config.Settings.voyage_rate_limit_rpm`): an unpaid Voyage
+    account is hard-capped at 3 req/min, and reactive retry-on-429 alone cannot
+    survive a ceiling that low -- a real ingest run failed outright with
+    ``RateLimitError`` before this limiter existed, because nothing paced
+    requests proactively. The retry logic below still exists as a second layer,
+    for transient failures the limiter doesn't prevent (a 503, a timeout).
     """
 
     model: str = "voyage-4-lite"
@@ -111,6 +120,7 @@ class Embedder:
     batch_size: int = 64
     max_attempts: int = 5
     api_key: str | None = None
+    rate_limit_rpm: float = 3.0
     stats: EmbedStats = field(default_factory=EmbedStats)
 
     def __post_init__(self) -> None:
@@ -120,6 +130,7 @@ class Embedder:
             api_key=self.api_key,
             max_retries=0,  # retries are handled here, with jitter
         )
+        self._bucket = TokenBucket(self.rate_limit_rpm, capacity=1)
 
     async def _embed_batch(self, texts: Sequence[str], input_type: str) -> list[Vector]:
         import voyageai.error as voyage_error
@@ -133,6 +144,7 @@ class Embedder:
             reraise=True,
         ):
             with attempt:
+                await self._bucket.acquire()
                 self.stats.requests += 1
                 result = await self._client.embed(
                     list(texts),

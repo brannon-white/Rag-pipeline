@@ -74,6 +74,12 @@ class Settings(BaseSettings):
     embed_dim: Annotated[int, Field(ge=64, le=2048)] = 512
     embed_batch_size: Annotated[int, Field(ge=1, le=256)] = 64
     rerank_model: str = "rerank-2.5-lite"
+    # Conservative default: an unpaid Voyage account is hard-capped at 3 req/min
+    # on both embeddings and reranking (verified live -- a real ingest run
+    # failed outright with RateLimitError before this limiter existed). Raise
+    # this once a payment method is on file; the 200M free-token allowance
+    # applies either way, only the RPM ceiling changes.
+    voyage_rate_limit_rpm: Annotated[float, Field(gt=0)] = 3.0
 
     # --- Retrieval -----------------------------------------------------------
     dense_k: Annotated[int, Field(ge=1, le=500)] = 50
