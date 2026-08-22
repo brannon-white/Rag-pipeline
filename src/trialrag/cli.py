@@ -17,6 +17,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
+from trialrag import bootstrap  # noqa: F401 - import side effect: SSL trust store fix
 from trialrag.config import get_settings
 from trialrag.db.migrate import MigrationError, migrate
 from trialrag.db.pool import Database
