@@ -1,0 +1,34 @@
+# Keep the build context small and secrets out of it entirely -- Docker
+# sends the whole context to the daemon before COPY instructions even run,
+# so this matters regardless of what the Dockerfile explicitly COPYs.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+.git/
+.github/
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+tests/
+evals/
+docs/
+terraform/
+.claude/
+
+*.md
+!README.md
+Dockerfile
+.dockerignore

@@ -1,0 +1,17 @@
+# Copy to terraform.tfvars and fill in the non-secret values, OR (preferred)
+# leave the sensitive ones out of any file entirely and export them as
+# TF_VAR_* environment variables right before `terraform apply` -- see
+# terraform/README.md. Either way, terraform.tfvars itself is gitignored;
+# only this .example file is tracked.
+
+aws_region          = "us-east-1"
+project_name        = "trialrag"
+github_repo         = "brannon-white/Rag-pipeline"
+max_daily_spend_usd = 40
+budget_alert_email  = "you@example.com"
+
+# --- Secrets: do not put real values here. Export as TF_VAR_anthropic_api_key,
+# TF_VAR_voyage_api_key, TF_VAR_database_url instead. ---
+# anthropic_api_key = ""
+# voyage_api_key    = ""
+# database_url      = ""
