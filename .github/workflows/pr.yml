@@ -54,3 +54,55 @@ jobs:
 
       - name: test (unit + integration, no network)
         run: uv run pytest tests/ -m "not network"
+
+  retrieval-gate:
+    # Tier-1 retrieval eval (see the plan's eval-tier split): deterministic
+    # and cheap enough to gate every PR, unlike the LLM-judge Tier-2
+    # generation eval, which is nightly/Batch-API and doesn't exist until
+    # M3/M5. Runs only once `check` passes, so a PR that's already broken on
+    # lint/types/tests doesn't spend a Neon branch or Voyage API calls.
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create ephemeral Neon branch
+        # Branches (via copy-on-write) from the project's default branch,
+        # which holds the real, permanently-ingested 30-study corpus --
+        # migrated + seeded there once, out of band. Never the same branch
+        # tests/integration/ uses: those run against a disposable local
+        # Postgres service and fabricated embeddings, not this real corpus.
+        uses: neondatabase/create-branch-action@v6
+        id: neon-branch
+        with:
+          project_id: ${{ secrets.NEON_PROJECT_ID }}
+          branch_name: ci-${{ github.run_id }}
+          api_key: ${{ secrets.NEON_API_KEY }}
+
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - run: uv python install 3.13
+
+      - run: uv sync --all-extras
+
+      - name: Retrieval regression gate (recall@10 vs baseline.json)
+        env:
+          TRIALRAG_DATABASE_URL: ${{ steps.neon-branch.outputs.db_url_pooled }}
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+          # Safe default (config.py) assumes an unpaid, 3 req/min Voyage
+          # tier; this account is paid, so raise it for this one job the same
+          # way local ad-hoc eval runs already do -- see docs/EVALUATION.md
+          # and SESSION_HANDOFF.md for why the hardcoded default itself stays
+          # conservative.
+          TRIALRAG_VOYAGE_RATE_LIMIT_RPM: "60"
+        run: uv run python -m evals.check_regression
+
+      - name: Delete ephemeral Neon branch
+        if: always()
+        uses: neondatabase/delete-branch-action@v3
+        with:
+          project_id: ${{ secrets.NEON_PROJECT_ID }}
+          branch: ci-${{ github.run_id }}
+          api_key: ${{ secrets.NEON_API_KEY }}
