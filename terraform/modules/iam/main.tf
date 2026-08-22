@@ -32,13 +32,22 @@ resource "aws_iam_openid_connect_provider" "github" {
   thumbprint_list = [data.tls_certificate.github.certificates[0].sha1_fingerprint]
 }
 
-# Scoped to pushes on `main` specifically -- that's the only ref deploy.yml
-# runs on. Widen the condition if a workflow_dispatch deploy path is ever
-# added.
+# Scoped to `main` -- both deploy.yml's triggers (push and workflow_dispatch)
+# resolve to the same `ref:refs/heads/main` subject when run against that
+# branch, so one condition value covers both.
+#
+# sts:TagSession is required here, not just AssumeRoleWithWebIdentity --
+# aws-actions/configure-aws-credentials tags the assumed session with GitHub
+# context by default (repo, actor, workflow, ...) unless
+# `role-skip-session-tagging: true` is set. Without this action allowed, AWS
+# rejects the *entire* AssumeRoleWithWebIdentity call, surfacing only as a
+# generic "Not authorized to perform sts:AssumeRoleWithWebIdentity" with no
+# mention of tagging anywhere in the error -- confirmed live, this is exactly
+# what broke the first real deploy.yml run.
 data "aws_iam_policy_document" "github_deploy_trust" {
   statement {
     effect  = "Allow"
-    actions = ["sts:AssumeRoleWithWebIdentity"]
+    actions = ["sts:AssumeRoleWithWebIdentity", "sts:TagSession"]
 
     principals {
       type        = "Federated"
