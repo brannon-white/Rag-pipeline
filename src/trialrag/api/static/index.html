@@ -145,6 +145,12 @@ function appendCitation(citation) {
 }
 
 async function* parseSSE(response) {
+  // sse_starlette terminates each frame with \r\n\r\n, not plain \n\n --
+  // confirmed live (headless-browser trace) that a plain "\n\n" search
+  // never matches inside "\r\n\r\n" (no two *consecutive* \n characters
+  // exist in it), so the old version buffered every byte of every stream
+  // forever and silently yielded nothing, ever, with no error anywhere.
+  // The regex accepts either line-ending style rather than assuming one.
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";
@@ -152,13 +158,13 @@ async function* parseSSE(response) {
     const { value, done } = await reader.read();
     if (done) break;
     buffer += decoder.decode(value, { stream: true });
-    let boundary;
-    while ((boundary = buffer.indexOf("\n\n")) !== -1) {
-      const rawEvent = buffer.slice(0, boundary);
-      buffer = buffer.slice(boundary + 2);
+    let match;
+    while ((match = buffer.match(/\r?\n\r?\n/)) !== null) {
+      const rawEvent = buffer.slice(0, match.index);
+      buffer = buffer.slice(match.index + match[0].length);
       let eventType = "message";
       let data = "";
-      for (const line of rawEvent.split("\n")) {
+      for (const line of rawEvent.split(/\r?\n/)) {
         if (line.startsWith("event:")) eventType = line.slice(6).trim();
         else if (line.startsWith("data:")) data += line.slice(5).trim();
       }
