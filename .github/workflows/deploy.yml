@@ -86,7 +86,15 @@ jobs:
         run: |
           set -euo pipefail
           SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
-          for _ in $(seq 1 60); do
+          # 30 min, not the original 10 -- confirmed live that App Runner's
+          # own health-gated cutover can stay OPERATION_IN_PROGRESS for over
+          # 10 minutes on a build that fails its health check before giving
+          # up and reverting SourceConfiguration back to the last-good image
+          # on its own. A shorter timeout here doesn't make the real
+          # deployment any faster; it just makes this step declare failure
+          # (correctly) before App Runner has actually finished settling,
+          # which is exactly what starved the rollback step below on that run.
+          for _ in $(seq 1 180); do
             STATUS=$(aws apprunner describe-service --service-arn "$SERVICE_ARN" \
               --query 'Service.Status' --output text)
             echo "status: $STATUS"
@@ -115,8 +123,39 @@ jobs:
           set -euo pipefail
           SERVICE_ARN="${{ vars.APPRUNNER_SERVICE_ARN }}"
           PREVIOUS_IMAGE="${{ steps.deploy.outputs.previous_image }}"
+
+          # App Runner's own health-gated cutover never routes traffic to a
+          # revision that fails its health check, and eventually reverts
+          # SourceConfiguration back to the last-good image on its own --
+          # confirmed live. So this step is defense-in-depth, not the only
+          # safety net; it's fine if App Runner beats it to the punch.
+          CURRENT_IMAGE=$(aws apprunner describe-service --service-arn "$SERVICE_ARN" \
+            --query 'Service.SourceConfiguration.ImageRepository.ImageIdentifier' --output text)
+          if [ "$CURRENT_IMAGE" = "$PREVIOUS_IMAGE" ]; then
+            echo "Already back on $PREVIOUS_IMAGE (App Runner's own rollback beat this step to it)"
+            exit 0
+          fi
+
           echo "Rolling back to $PREVIOUS_IMAGE"
           jq --arg img "$PREVIOUS_IMAGE" '.ImageRepository.ImageIdentifier = $img' \
             current_config.json > rollback_config.json
-          aws apprunner update-service --service-arn "$SERVICE_ARN" \
-            --source-configuration file://rollback_config.json
+
+          # update-service 400s with InvalidStateException while the failed
+          # deployment attempt is still OPERATION_IN_PROGRESS -- confirmed
+          # live, this can outlast the "wait" step's own timeout. Retry
+          # rather than treat that race as fatal.
+          for _ in $(seq 1 20); do
+            if aws apprunner update-service --service-arn "$SERVICE_ARN" \
+              --source-configuration file://rollback_config.json 2>rollback_err.log; then
+              exit 0
+            fi
+            if ! grep -q InvalidStateException rollback_err.log; then
+              cat rollback_err.log
+              exit 1
+            fi
+            echo "Service still busy, retrying rollback in 15s..."
+            sleep 15
+          done
+          echo "Gave up retrying rollback -- App Runner's own auto-rollback should still apply"
+          cat rollback_err.log
+          exit 1

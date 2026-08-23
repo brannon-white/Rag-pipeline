@@ -19,10 +19,8 @@ router = APIRouter(tags=["health"])
 
 
 @router.get("/healthz")
-async def healthz() -> JSONResponse:
-    # TEMPORARY: deliberately broken to verify deploy.yml's rollback path
-    # fires for real. Will be reverted immediately after confirming it.
-    return JSONResponse(content={"status": "broken on purpose"}, status_code=500)
+async def healthz() -> dict[str, str]:
+    return {"status": "ok"}
 
 
 @router.get("/readyz", response_model=ReadyStatus)
